@@ -1,0 +1,137 @@
+html{
+	background-image: url(https://w-dog.ru/wallpapers/15/7/539631691058319/knigi-fon-stil-vladstudio.jpg);
+
+}
+body{
+	position: absolute;
+	left: 54px;
+	right: 37px;
+	top: 42px;
+	bottom: 35px;
+
+	background: #FFFFFF;
+}
+
+h1{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 48px;
+	line-height: 56px;
+	text-align: center;
+}
+
+.search{
+	/*position: relative;*/
+	width: 397px;
+	height: 49px;
+	
+
+	/*left:457px;*/
+	background: #FFFFFF;
+	border: 1px solid #742A00;
+	box-sizing: border-box;
+	
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 28px;
+	line-height: 33px;
+
+	color: #000000;
+	
+}
+
+.buttonSearch{
+	position: relative;
+	width: 330px;
+	height: 49px;
+	border:0;
+	/*vertical-align:top;*/
+	/*right:40px;*/
+
+	background: #742A00;
+	
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 28px;
+	line-height: 33px;
+
+	color: #FFF;
+	
+}
+.buttonSearchPluc{
+	vertical-align:top;
+	width: 61px;
+	height: 49px;
+	margin-bottom:0;
+	background:#EC823A;
+	border:1px solid #742A00;
+}
+.table{
+	position: absolute;
+	left: 29px;
+	right: 40px;
+	top: 114px;
+	bottom: 30px;
+	z-index:1000;
+	padding-top:29px;
+
+	background: #F9B384;
+	overflow:auto;
+	text-align: center; 
+}
+
+table{
+	/*width:100%;*/
+	
+	border-collapse:collapse;
+	border:1px solid black;
+	
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+
+	color: #0B0B0B;
+	margin: 10px auto;
+	
+}
+tr{
+
+	height: 52px;
+	border:1px solid black;
+}
+
+td{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 42px;
+	text-align: right;
+	/*border:1px solid black;*/
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1024px) { 
+	table{
+		font-size: 20px;
+	}
+	.buttonStyle{
+		width: 100%;
+	}
+}

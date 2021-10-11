@@ -1,0 +1,272 @@
+html{
+	background-image: url(https://w-dog.ru/wallpapers/15/7/539631691058319/knigi-fon-stil-vladstudio.jpg);
+
+}
+body{
+	position: absolute;
+	left: 54px;
+	right: 37px;
+	top: 42px;
+	bottom: 35px;
+
+	background: #FFFFFF;
+}
+
+hr{
+	position: relative;
+	border-color:rgba(0, 0, 0, 0); 
+	background:#7C3C21;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin:0;
+	
+}
+.Contract{
+	position: relative;
+	width: 213px;
+	height: 65.5px;
+	left: 29px;
+	top: 9px;
+	background:url(ДоговорПрямоугольникКоричневый.png);
+	display: inline-block;
+}
+
+.a:hover .Contract{
+	background:url(ДоговорПрямоугольник.png);
+}
+
+.formalizeContract{
+	position: relative;
+	width: 391px;
+	height: 66px;
+	left: 20px;
+	top: 9px;
+	background:url(ОформитьДоговорПрямоугольникСерый.png);
+	display: inline-block;
+}
+
+
+.Exit{
+	position: relative;
+	width: 213px;
+	height: 65.5px;
+	top: 9px;
+	float:right;
+	background:url(ВыйтиПрямоугольник.png);
+	display: inline-block;
+}
+
+.a2:hover .Exit{
+	background:url(ВыйтиПрямоугольникСерый.png);
+}
+
+.ContractText{
+	
+    color: #fff;
+    border-radius: 2px;
+    position: absolute;
+    left: 55px;
+    top:30px;
+    font-size: 18px;
+    
+	z-index:100;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 42px;
+	text-align: center;
+}
+.a:hover .ContractText{
+	color: #000;
+}
+.formalizeContractText{
+	color: #000;
+    border-radius: 2px;
+    position: absolute;
+    left: 290px;
+    top:30px;
+    font-size: 18px;
+    
+	z-index:100;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 42px;
+	text-align: center;
+}
+
+
+
+.ExitText{
+	color: #fff;
+    border-radius: 2px;
+    position: absolute;
+    float:right;
+	right:45px;
+    top:30px;
+    font-size: 18px;
+    
+	z-index:100;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 42px;
+	text-align: center;
+}
+.a2:hover .ExitText{
+	color: #000;
+}
+a{
+	text-decoration: none; 
+}
+.buttonSort{
+	position: relative;
+	border:0;
+	height: 49px;
+	width: 213px;
+	margin-left: 29px;
+	background: #EC823A;
+	display: inline-block;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 42px;
+	text-align: center;
+
+	color: #FFFFFF;
+}
+.buttonSortP{
+	
+}
+
+.search{
+	/*position: relative;*/
+	width: 397px;
+	height: 49px;
+	
+
+	/*left:457px;*/
+	background: #FFFFFF;
+	border: 1px solid #742A00;
+	box-sizing: border-box;
+	
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 28px;
+	line-height: 33px;
+
+	color: #000000;
+	
+}
+
+.buttonSearch{
+	position: relative;
+	width: 397px;
+	height: 49px;
+	border:0;
+	/*vertical-align:top;*/
+	/*right:40px;*/
+
+	background: #742A00;
+	
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 28px;
+	line-height: 33px;
+
+	color: #FFF;
+	
+}
+
+.buttonSearch:hover{
+	background: #E8E4E1;
+	color:#000;
+	border:1px solid #742A00;
+}
+
+.buttonSearchPluc{
+	vertical-align:top;
+	width: 61px;
+	height: 49px;
+	margin-bottom:0;
+	background:#EC823A;
+	border:1px solid #742A00;
+	
+}
+
+.buttonSearchPluc:hover{
+	background:#E8E4E1;
+	
+}
+
+.table{
+	position: absolute;
+	left: 29px;
+	right: 40px;
+	top: 114px;
+	bottom: 30px;
+	z-index:1000;
+	padding-top:29px;
+
+	background: #F9B384;
+	overflow:auto;
+	text-align: center; 
+}
+
+table{
+	/*width:100%;*/
+	
+	border-collapse:collapse;
+	/*border:1px solid black;*/
+	
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+
+	color: #0B0B0B;
+	margin: 10px auto;
+	
+}
+tr{
+
+	height: 52px;
+	/*border:1px solid black;*/
+}
+
+td{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 42px;
+	text-align: right;
+	/*border:1px solid black;*/
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1024px) { 
+	table{
+		font-size: 20px;
+	}
+	.buttonStyle{
+		width: 100%;
+	}
+}

@@ -1,0 +1,160 @@
+html{
+	background-image: url(https://w-dog.ru/wallpapers/15/7/539631691058319/knigi-fon-stil-vladstudio.jpg);
+
+}
+body{
+	position: absolute;
+	left: 54px;
+	right: 37px;
+	top: 42px;
+	bottom: 35px;
+
+	background: #FFFFFF;
+}
+.RegisterNow{
+	position: absolute;
+	left: 35px;
+	right: 35px;
+	top: 35px;
+	bottom: 35px;
+
+	background: #742A00;
+}
+.text{
+	/*position: absolute;*/
+	height: 82px;
+	left: 69px;
+	right: 56px;
+	top: 71px;
+
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 48px;
+	line-height: 56px;
+	text-align: center;
+
+	color: #FFFFFF;
+
+	/*border: 1px solid #FFFFFF;*/
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.textpole{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 42px;
+}
+/*.surname{
+
+	max-width: 565px;
+	padding:15px;
+	left: 33px;
+	top: 123px;
+
+	background: #FFFFFF;
+
+}
+.name{
+	max-width: 565px;
+	padding:15px;
+	left: 33px;
+	top: 220px;
+
+	background: #FFFFFF;
+	
+}
+.patronymic{
+	max-width: 565px;
+	padding:15px;
+	left: 33px;
+	top: 317px;
+
+	background: #FFFFFF;
+}
+.loginRge{
+	max-width: 565px;
+	padding:15px;
+	left: 33px;
+	top: 414px;
+
+	background: #FFFFFF;
+}
+.passwordReg{
+	max-width: 565px;
+	padding:15px;
+	left: 33px;
+	top: 511px;
+
+	background: #FFFFFF;
+}
+.passport{
+	padding:15px;
+	left: 654px;
+	top: 123px;
+
+	background: #FFFFFF;
+}
+.email{
+	padding:15px;
+	left: 654px;
+	top: 220px;
+
+	background: #FFFFFF;
+}
+.telefon{
+	padding:15px;
+	left: 654px;
+	top: 317px;
+
+	background: #FFFFFF;
+}
+.address{
+	padding:15px;
+	left: 654px;
+	top: 414px;
+
+	background: #FFFFFF;
+}
+.accessRights{
+	padding:15px;
+	left: 654px;
+	top: 511px;
+
+	background: #FFFFFF;
+}*/
+input{
+	border:0;
+	margin:10px auto;
+	margin-top:0;
+	padding:5px;
+}
+.block{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/*margin:30px;*/
+
+}
+
+.buttonRegisterNow{
+	padding:15px;
+	padding-right:100px;
+	padding-left:100px;
+	border:0;
+	background: #F9B384;
+	
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 35px;
+	text-align: center;
+
+	color: #000000;
+}
+
+.buttonRegisterP{
+	text-align:center;
+}

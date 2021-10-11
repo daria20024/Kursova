@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Издательство</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	</head>
+	<body>
+		<div class="toComeIn">
+			<form action="handler.php">
+				<p class="text">Войти</p>
+				<p class="block"><input class="login" type="text" name="login" placeholder="Логин"><Br>
+				<input type="text" class="password" style = "margin-bottom:10px;" name="password" placeholder="Пароль"><Br></p>
+				
+			</form>
+			<a href="websityContract.html"><p class="blockBut textOR"><input type="submit" class="buttonComeIn" value="Войти"></a>
+				или
+
+			 <a href="websityReg.html"><p class="blockBut textOR" style="margin-top:10px;">
+			 <button type="submit" class="buttonRegisterNow ">Зарегистрироваться</button></p></a>
+		</div>
+	</body>
+</html>

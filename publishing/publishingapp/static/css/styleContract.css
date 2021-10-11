@@ -1,0 +1,265 @@
+html{
+	background-image: url(https://w-dog.ru/wallpapers/15/7/539631691058319/knigi-fon-stil-vladstudio.jpg);
+
+}
+body{
+	position: absolute;
+	left: 54px;
+	right: 37px;
+	top: 42px;
+	bottom: 35px;
+
+	background: #FFFFFF;
+}
+
+hr{
+	position: relative;
+	border-color:rgba(0, 0, 0, 0); 
+	background:#7C3C21;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin:0;
+	
+}
+.Contract{
+	position: relative;
+	width: 213px;
+	height: 65.5px;
+	left: 29px;
+	top: 9px;
+	background:url(ДоговорПрямоугольник.png);
+	display: inline-block;
+}
+
+.formalizeContract{
+	position: relative;
+	width: 391px;
+	height: 66px;
+	left: 20px;
+	top: 9px;
+	background:url(ОформитьДоговорПрямоугольник.png);
+	display: inline-block;
+}
+
+.a1:hover .formalizeContract{
+	background:url(ОформитьДоговорПрямоугольникСерый.png);
+}
+
+.Exit{
+	position: relative;
+	width: 213px;
+	height: 65.5px;
+	top: 9px;
+	float:right;
+	background:url(ВыйтиПрямоугольник.png);
+	display: inline-block;
+}
+
+.a2:hover .Exit{
+	background:url(ВыйтиПрямоугольникСерый.png);
+}
+
+.ContractText{
+	
+    color: #000;
+    border-radius: 2px;
+    position: absolute;
+    left: 55px;
+    top:30px;
+    font-size: 18px;
+    
+	z-index:100;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 42px;
+	text-align: center;
+}
+
+.formalizeContractText{
+	color: #fff;
+    border-radius: 2px;
+    position: absolute;
+    left: 290px;
+    top:30px;
+    font-size: 18px;
+    
+	z-index:100;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 42px;
+	text-align: center;
+}
+
+.a1:hover .formalizeContractText{
+	color: #000;
+}
+
+
+.ExitText{
+	color: #fff;
+    border-radius: 2px;
+    position: absolute;
+    float:right;
+	right:45px;
+    top:30px;
+    font-size: 18px;
+    
+	z-index:100;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 42px;
+	text-align: center;
+}
+.a2:hover .ExitText{
+	color: #000;
+}
+
+a{
+	text-decoration: none; 
+}
+.buttonSort{
+	position: relative;
+	border:0;
+	height: 49px;
+	width: 213px;
+	margin-left: 29px;
+	background: #EC823A;
+	display: inline-block;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 42px;
+	text-align: center;
+
+	color: #FFFFFF;
+}
+
+.search{
+	position: relative;
+	width: 502px;
+	height: 49px;
+	right:35px;
+
+	background: #FFFFFF;
+	border: 1px solid #742A00;
+	box-sizing: border-box;
+	
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 28px;
+	line-height: 33px;
+
+	color: #000000;
+}
+
+.buttonSearch{
+	position: relative;
+	width: 49px;
+	height: 49px;
+	border:0;
+	vertical-align:top;
+	right:40px;
+
+	background: #742A00;
+
+}
+
+.table{
+	position: absolute;
+	left: 29px;
+	right: 40px;
+	top: 155px;
+	bottom: 120px;
+	z-index:1000;
+
+	background: #F9B384;
+	overflow:auto;
+	
+}
+
+table{
+	width:100%;
+	border-collapse:collapse;
+	border:1px solid black;
+	
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+
+	color: #0B0B0B;
+	
+}
+tr{
+
+	height: 52px;
+	border:1px solid black;
+}
+th{
+	
+	background: #F9B384;
+	border:1px solid black;
+}
+td{
+	
+	border:1px solid black;
+	background: #fff;
+}
+
+.buttonStyle{
+
+	bottom:0; 
+	background: #742A00;
+	border:0;
+	
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 42px;
+	text-align: right;
+
+	color: #FFFFFF;
+	
+	display: inline-block; /*располагаем блоки в ряд по горизонтали*/
+	width: 33%;
+	text-align: center;
+}
+
+
+.button {	
+	position: fixed;
+    left: 90px; 
+	bottom: 85px; 
+    padding: 10px; 
+    background: #39b54a;
+    right:85px;
+	text-align: center;
+	background: #F9B384;
+}
+
+
+
+
+/*сортировка*/
+.content {
+	display: none;
+  }
+
+@media screen and (max-width:1024px) { 
+	table{
+		font-size: 20px;
+	}
+	.buttonStyle{
+		width: 100%;
+	}
+}

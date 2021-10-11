@@ -1,0 +1,133 @@
+html{
+	background-image: url(https://w-dog.ru/wallpapers/15/7/539631691058319/knigi-fon-stil-vladstudio.jpg);
+
+}
+body{
+	position: absolute;
+	left: 54px;
+	right: 37px;
+	top: 42px;
+	bottom: 35px;
+
+	background: #FFFFFF;
+}
+.toComeIn{
+	position: absolute;
+	left: 332px;
+	right: 329px;
+	top: 35px;
+	bottom: 35px;
+
+	background: #742A00;
+}
+.text{
+	height: 82px;
+	left: 69px;
+	right: 56px;
+	top: 71px;
+
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 48px;
+	line-height: 56px;
+	text-align: center;
+
+	color: #FFFFFF;
+	margin-bottom:0;
+
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+input,button{
+	border:0;
+	margin:10px auto;
+	margin-top:0;
+	padding:20px;
+	width:100%;
+	margin-bottom:40px;
+	
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 42px;
+}
+.buttonComeIn{
+	padding:15px;
+	padding-right:100px;
+	padding-left:100px;
+	border:0;
+	background: #F9B384;
+	
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 35px;
+	text-align: center;
+
+	color: #000000;
+	margin-bottom:10px;margin-top:0;
+
+}
+.buttonRegisterNow{
+	padding:15px;
+	padding-right:100px;
+	padding-left:100px;
+	border:0;
+	background: #F9B384;
+	
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 35px;
+	text-align: center;
+
+	color: #000000;
+	margin-bottom:0;margin-top:0px;
+	text-decoration: none; 
+
+
+}
+
+.block{
+	
+	margin-left:67px;
+	margin-right:100px;
+	margin-bottom:0;
+
+}
+
+.blockBut{
+	margin-left:67px;
+	margin-right:60px;
+	color:#000;
+	margin-bottom:0;
+	
+}
+/*или*/
+.textOR{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 35px;
+	text-align: center;
+
+	color: #fff;
+}
+
+
+@media screen and (max-width:1300px) { 
+	.toComeIn{
+		position: absolute;
+		left: 35px;
+		right: 35px;
+		top: 35px;
+		bottom: 35px;
+
+		background: #742A00;
+	}
+}
