@@ -1,9 +1,10 @@
 <!DOCTYPE HTML>
+{% load static %}
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title>Издательство</title>
-		<link rel="stylesheet" type="text/css" href="styleReg.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/styleReg.css' %}">
 	</head>
 	<body>
 		<div class="RegisterNow">
@@ -19,7 +20,7 @@
 				<input class="email textpole" type="text" name="email" placeholder="Email"><Br>
 				<input class="telefon textpole" type="text" name="telefon" placeholder="Телефон"><Br>
 				<input class="address textpole" type="text" name="address" placeholder="Адрес"><Br>
-				<input class="accessRights textpole" type="text" name="accessRights" placeholder="Права доступа"><Br></p>
+				<!--<input class="accessRights textpole" type="text" name="accessRights" placeholder="Права доступа"><Br></p>-->
 				
 			 </form>
 			 <a href="websity.html"><p class="buttonRegisterP"><input type="submit" class="buttonRegisterNow" value="Зарегистрироваться"></p></a>

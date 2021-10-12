@@ -1,9 +1,10 @@
 <!DOCTYPE HTML>
+{% load static %}
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title>Издательство</title>
-		<link rel="stylesheet" type="text/css" href="styleChangeContract.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/styleChangeContract.css' %}">
 	</head>
 	<body>
 		
@@ -19,7 +20,7 @@
 				<tr>
 					<td>Автор</td>
 					<td style="font-size: 0;"><input type="text" class="search" style = "width:336px" value="01">
-					<a href="websityAuthor.html"><button type="submit" class="buttonSearchPluc"><img src="+.png" 
+					<a href="websityAuthor.html"><button type="submit" class="buttonSearchPluc"><img src="{% static 'img/+.png' %}"
 					alt="" style="vertical-align:middle" width= "36px" height= "36px"></button></a></td>
 				</tr>
 				<tr>

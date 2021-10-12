@@ -1,26 +1,30 @@
 html{
-	background-image: url(https://w-dog.ru/wallpapers/15/7/539631691058319/knigi-fon-stil-vladstudio.jpg);
+	background-image: url(../img/Фон.png);
 
 }
 body{
-	position: absolute;
-	left: 54px;
-	right: 37px;
-	top: 42px;
-	bottom: 35px;
-
+	/*position: absolute;*/
+	margin-left: 54px;
+	margin-right: 37px;
+	margin-top: 42px;
+	margin-bottom: 35px;
+	margin-bottom:35px;
 	background: #FFFFFF;
-	/*height:auto;*/
+	/*-height:auto;*/
 
 }
 
 .block{
 
-	margin-left: 235px;
-	margin-right:235px;
+	margin-left: 400px;
+	margin-right:400px;
 
 	margin-bottom: 35px;
-	
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	line-height: 33px;
 	
 	padding: 15px;
 	border:1px solid black;

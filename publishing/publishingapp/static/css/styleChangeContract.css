@@ -1,5 +1,5 @@
 html{
-	background-image: url(https://w-dog.ru/wallpapers/15/7/539631691058319/knigi-fon-stil-vladstudio.jpg);
+	background-image: url(../img/Фон.png);
 
 }
 body{
@@ -61,6 +61,12 @@ h1{
 	color: #FFF;
 	
 }
+.buttonSearch:hover{
+	background: #E8E4E1;
+	color:#000;
+	border:1px solid #742A00;
+}
+
 .buttonSearchPluc{
 	vertical-align:top;
 	width: 61px;
@@ -69,6 +75,11 @@ h1{
 	background:#EC823A;
 	border:1px solid #742A00;
 }
+.buttonSearchPluc:hover{
+	background:#E8E4E1;
+	
+}
+
 .table{
 	position: absolute;
 	left: 29px;
@@ -87,7 +98,7 @@ table{
 	/*width:100%;*/
 	
 	border-collapse:collapse;
-	border:1px solid black;
+	/*border:1px solid black;*/
 	
 	font-family: Roboto;
 	font-style: normal;
@@ -103,7 +114,7 @@ table{
 tr{
 
 	height: 52px;
-	border:1px solid black;
+	/*border:1px solid black;*/
 }
 
 td{

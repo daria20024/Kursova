@@ -1,5 +1,5 @@
 html{
-	background-image: url(https://w-dog.ru/wallpapers/15/7/539631691058319/knigi-fon-stil-vladstudio.jpg);
+	background-image: url(../img/Фон.png);
 
 }
 body{
@@ -71,6 +71,13 @@ input,button{
 	margin-bottom:10px;margin-top:0;
 
 }
+
+.buttonComeIn:hover,.buttonRegisterNow:hover{
+	background: #E8E4E1;
+	color:#000;
+	
+}
+
 .buttonRegisterNow{
 	padding:15px;
 	padding-right:100px;
@@ -91,6 +98,7 @@ input,button{
 
 
 }
+
 
 .block{
 	

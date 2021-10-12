@@ -1,5 +1,5 @@
 html{
-	background-image: url(https://w-dog.ru/wallpapers/15/7/539631691058319/knigi-fon-stil-vladstudio.jpg);
+	background-image: url(../img/Фон.png);
 
 }
 body{
@@ -26,7 +26,7 @@ hr{
 	height: 65.5px;
 	left: 29px;
 	top: 9px;
-	background:url(ДоговорПрямоугольник.png);
+	background:url(../img/ДоговорПрямоугольник.png);
 	display: inline-block;
 }
 
@@ -36,12 +36,12 @@ hr{
 	height: 66px;
 	left: 20px;
 	top: 9px;
-	background:url(ОформитьДоговорПрямоугольник.png);
+	background:url(../img/ОформитьДоговорПрямоугольник.png);
 	display: inline-block;
 }
 
 .a1:hover .formalizeContract{
-	background:url(ОформитьДоговорПрямоугольникСерый.png);
+	background:url(../img/ОформитьДоговорПрямоугольникСерый.png);
 }
 
 .Exit{
@@ -50,12 +50,12 @@ hr{
 	height: 65.5px;
 	top: 9px;
 	float:right;
-	background:url(ВыйтиПрямоугольник.png);
+	background:url(../img/ВыйтиПрямоугольник.png);
 	display: inline-block;
 }
 
 .a2:hover .Exit{
-	background:url(ВыйтиПрямоугольникСерый.png);
+	background:url(../img/ВыйтиПрямоугольникСерый.png);
 }
 
 .ContractText{
@@ -126,7 +126,7 @@ a{
 	position: relative;
 	border:0;
 	height: 49px;
-	width: 213px;
+	width: 218px;
 	margin-left: 29px;
 	background: #EC823A;
 	display: inline-block;
@@ -135,6 +135,23 @@ a{
 	font-weight: normal;
 	font-size: 30px;
 	line-height: 42px;
+	text-align: center;
+
+	color: #FFFFFF;
+}
+.buttonSort:hover, .buttonSortSmall:hover{
+	border:1px solid #EC823A;
+	background: #fff;
+	color: #000;
+}
+.buttonSortSmall{
+	width:100%;
+	border:1px solid #EC823A;
+	background:#EC823A;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
 	text-align: center;
 
 	color: #FFFFFF;
@@ -157,6 +174,7 @@ a{
 	line-height: 33px;
 
 	color: #000000;
+	margin-left:0;
 }
 
 .buttonSearch{
@@ -170,14 +188,17 @@ a{
 	background: #742A00;
 
 }
-
+.buttonSearch:hover{
+	background: #EC823A;
+	border:1px solid #742A00;
+}
 .table{
 	position: absolute;
 	left: 29px;
 	right: 40px;
 	top: 155px;
 	bottom: 120px;
-	z-index:1000;
+	z-index:999;
 
 	background: #F9B384;
 	overflow:auto;
@@ -234,6 +255,11 @@ td{
 	width: 33%;
 	text-align: center;
 }
+.buttonStyle:hover{
+	background: #E8E4E1;
+	color:#000;
+	border:1px solid #742A00;
+}
 
 
 .button {	
@@ -248,12 +274,37 @@ td{
 }
 
 
+/*сортировать*/
 
 
-/*сортировка*/
-.content {
-	display: none;
-  }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  z-index: 1000;
+  left: 29px;
+  width: 218px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
 
 @media screen and (max-width:1024px) { 
 	table{

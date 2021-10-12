@@ -1,5 +1,5 @@
 html{
-	background-image: url(https://w-dog.ru/wallpapers/15/7/539631691058319/knigi-fon-stil-vladstudio.jpg);
+	background-image: url(../img/Фон.png);
 
 }
 body{
@@ -26,12 +26,12 @@ hr{
 	height: 65.5px;
 	left: 29px;
 	top: 9px;
-	background:url(ДоговорПрямоугольникКоричневый.png);
+	background:url(../img/ДоговорПрямоугольникКоричневый.png);
 	display: inline-block;
 }
 
 .a:hover .Contract{
-	background:url(ДоговорПрямоугольник.png);
+	background:url(../img/ДоговорПрямоугольник.png);
 }
 
 .formalizeContract{
@@ -40,7 +40,7 @@ hr{
 	height: 66px;
 	left: 20px;
 	top: 9px;
-	background:url(ОформитьДоговорПрямоугольникСерый.png);
+	background:url(../img/ОформитьДоговорПрямоугольникСерый.png);
 	display: inline-block;
 }
 
@@ -51,12 +51,12 @@ hr{
 	height: 65.5px;
 	top: 9px;
 	float:right;
-	background:url(ВыйтиПрямоугольник.png);
+	background:url(../img/ВыйтиПрямоугольник.png);
 	display: inline-block;
 }
 
 .a2:hover .Exit{
-	background:url(ВыйтиПрямоугольникСерый.png);
+	background:url(../img/ВыйтиПрямоугольникСерый.png);
 }
 
 .ContractText{
