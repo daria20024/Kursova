@@ -58,7 +58,10 @@
 					<th>Автор</th>
 					<th>Издательство</th>
 			   </tr>
-			   <tr>
+				{% for contract in contractss %}
+				{% include 'contractOne.html' %}
+				{% endfor %}
+			   <!--<tr>
 					<td>ID</td>
 					<td>Дата договора</td>
 					<td>Дата исполнения</td>
@@ -167,7 +170,7 @@
 					<td>Сотрудник</td>
 					<td>Автор</td>
 					<td>Издательство</td>
-				</tr>
+				</tr>-->
 			</table>
 			<div class="button">
 				<a href="websityPrint.html"><input type="submit" class="buttonStyle buttonPrint" value="Печатать"></a>

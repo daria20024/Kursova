@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from django.http import HttpResponseRedirect
+from .baza import *
 
 
 # Create your views here.
@@ -24,7 +25,10 @@ class ChangeContract(View):
 
 class Contract(View):
     def get(self,request):
-        context = {}
+        contractss = get_contract()
+        context = {
+           'contractss': contractss
+        }
         return render(request, 'websityContract.html', context=context)
 
 

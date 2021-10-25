@@ -30,7 +30,7 @@ class staff(models.Model):
     mail = models.CharField(max_length=50)
     login = models.CharField(max_length=30)
     password = models.CharField(max_length=30)
-    priority = models.CharField(max_length=1)
+    priority = models.CharField(max_length=1,default='1')
 
 
 class contract(models.Model):
