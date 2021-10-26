@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Издательство</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/styleContract.css' %}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+	</head>
+	<body>
+		<div>
+			<div class="a"style="display:inline-block"><a href="websityContract.html" class="Contract"></a>
+			<a href="websityContract1.html"class="ContractText">Договоры</a></div>
+			<!--<div class="a1"style="display:inline-block"><a href="websityFormalizeContract.html" class="formalizeContract"></a>
+			<a href="websityFormalizeContract.html" class="formalizeContractText">ОформитьДоговор</a></div>-->
+			<div class="a2"style="display:inline-block;float:right"><a href="websity.html" class="Exit" ></a>
+			<a href="websity.html" class="ExitText">Выйти</a></div>
+		</div>
+		<hr size="5" style="">
+		
+			
+		<div class="buttonSortA" style="margin-top:18px;display:inline-block;">
+		  <button onclick="myFunction()" class="buttonSort"> Сортировать по</button>
+		  <div id="myDropdown" class="dropdown-content">
+			<form>
+				<p><input type="checkbox" name="Sort" value="ID" checked>ID</p>
+				<p><input type="checkbox" name="Sort" value="ДатаДоговора"> Дата договора</p>
+				<p><input type="checkbox" name="Sort" value="ДатаИсполнения"> Дата исполнения</p>
+				<p><input type="checkbox" name="Sort" value="Формат"> Формат</p>
+				<p><input type="checkbox" name="Sort" value="Объём"> Объём</p>
+				<p><input type="checkbox" name="Sort" value="Тираж"> Тираж</p>
+				<p><input type="checkbox" name="Sort" value="Сотрудник"> Сотрудник</p>
+				<p><input type="checkbox" name="Sort" value="Автор"> Автор</p>
+				<p><input type="checkbox" name="Sort" value="Издательство"> Издательство</p>
+				<p><input type="submit" class="buttonSortSmall" value="Сортировать" style=""></p>
+			</form>
+		  </div>
+		</div>
+		<div style="display:inline-block; float:right">
+		<form style="display:inline-block;">
+			<p style="display:inline-block;float:right;vertical-align:top"><input type="text" class="search" placeholder="Поиск">
+			<button type="submit" class="buttonSearch"><img src="{% static 'img/лупа.png' %}" alt="" style="vertical-align:middle" width= "36px" height= "36px"></button></p>
+		</form>
+		</div>
+		<div class="table">
+			<table>
+				<tr>
+					<th>ID</th>
+					<th>Дата договора</th>
+					<th>Дата исполнения</th>
+					<th>Формат</th>
+					<th>Объём</th>
+					<th>Тираж</th>
+					<th>Сотрудник</th>
+					<th>Автор</th>
+					<th>Издательство</th>
+			   </tr>
+				{% for contract in contractss %}
+				{% include 'contractOne.html' %}
+				{% endfor %}
+			   <!--<tr>
+					<td>ID</td>
+					<td>Дата договора</td>
+					<td>Дата исполнения</td>
+					<td>Формат</td>
+					<td>Объём</td>
+					<td>Тираж</td>
+					<td>Сотрудник</td>
+					<td>Автор</td>
+					<td>Издательство</td>
+				</tr>
+				<tr>
+					<td>ID</td>
+					<td>Дата договора</td>
+					<td>Дата исполнения</td>
+					<td>Формат</td>
+					<td>Объём</td>
+					<td>Тираж</td>
+					<td>Сотрудник</td>
+					<td>Автор</td>
+					<td>Издательство</td>
+				</tr>
+				<tr>
+					<td>ID</td>
+					<td>Дата договора</td>
+					<td>Дата исполнения</td>
+					<td>Формат</td>
+					<td>Объём</td>
+					<td>Тираж</td>
+					<td>Сотрудник</td>
+					<td>Автор</td>
+					<td>Издательство</td>
+				</tr>
+				<tr>
+					<td>ID</td>
+					<td>Дата договора</td>
+					<td>Дата исполнения</td>
+					<td>Формат</td>
+					<td>Объём</td>
+					<td>Тираж</td>
+					<td>Сотрудник</td>
+					<td>Автор</td>
+					<td>Издательство</td>
+				</tr>
+				<tr>
+					<td>ID</td>
+					<td>Дата договора</td>
+					<td>Дата исполнения</td>
+					<td>Формат</td>
+					<td>Объём</td>
+					<td>Тираж</td>
+					<td>Сотрудник</td>
+					<td>Автор</td>
+					<td>Издательство</td>
+				</tr>
+				<tr>
+					<td>ID</td>
+					<td>Дата договора</td>
+					<td>Дата исполнения</td>
+					<td>Формат</td>
+					<td>Объём</td>
+					<td>Тираж</td>
+					<td>Сотрудник</td>
+					<td>Автор</td>
+					<td>Издательство</td>
+				</tr>
+				<tr>
+					<td>ID</td>
+					<td>Дата договора</td>
+					<td>Дата исполнения</td>
+					<td>Формат</td>
+					<td>Объём</td>
+					<td>Тираж</td>
+					<td>Сотрудник</td>
+					<td>Автор</td>
+					<td>Издательство</td>
+				</tr>
+				<tr>
+					<td>ID</td>
+					<td>Дата договора</td>
+					<td>Дата исполнения</td>
+					<td>Формат</td>
+					<td>Объём</td>
+					<td>Тираж</td>
+					<td>Сотрудник</td>
+					<td>Автор</td>
+					<td>Издательство</td>
+				</tr>
+				<tr>
+					<td>ID</td>
+					<td>Дата договора</td>
+					<td>Дата исполнения</td>
+					<td>Формат</td>
+					<td>Объём</td>
+					<td>Тираж</td>
+					<td>Сотрудник</td>
+					<td>Автор</td>
+					<td>Издательство</td>
+				</tr>
+				<tr>
+					<td>ID</td>
+					<td>Дата договора</td>
+					<td>Дата исполнения</td>
+					<td>Формат</td>
+					<td>Объём</td>
+					<td>Тираж</td>
+					<td>Сотрудник</td>
+					<td>Автор</td>
+					<td>Издательство</td>
+				</tr>-->
+			</table>
+			<div class="button">
+				<a href="websityPrint1.html"><input type="submit" class="buttonStyle buttonPrint" value="Печатать"></a>
+				<!--<a href="websityChangeContract.html"><input type="submit" class="buttonStyle buttonEdit" value="Редактировать"></a>
+				<input type="submit" class="buttonStyle buttonDelete" value="Удалить">-->
+			</div>
+		</div>
+		<script>
+/* Когда пользователь нажимает на кнопку, переключаться раскрывает содержимое */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+// Закрыть раскрывающийся список, если пользователь щелкнет за его пределами.
+/*window.onclick = function(event) {
+  if (!event.target.matches('.buttonSortA') ) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}*/
+</script>
+	</body>
+</html>

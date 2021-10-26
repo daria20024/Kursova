@@ -16,46 +16,88 @@
 			<a href="websity.html" class="ExitText">Выйти</a></div>
 		</div>
 		<hr size="5" style="">
-		
-		<div class="table">
-			<table>
-				
-			   <tr>
-					<td>Дата договора</td>
-					<td><input type="text" class="search" placeholder="Поиск"></td>
-				</tr>
-				<tr>
-					<td>Автор</td>
-					<td style="font-size: 0;"><input type="text" class="search" style = "width:336px" placeholder="Поиск">
-					<a href="websityAuthor.html"><button type="submit" class="buttonSearchPluc"><img src="{% static 'img/+.png' %}"
-					alt="" style="vertical-align:middle" width= "36px" height= "36px"></button></a></td>
-				</tr>
-				<tr>
-					<td>Издательство</td>
-					<td><input type="text" class="search" placeholder="Поиск"></td>
-				</tr>
-				<tr>
-					<td>Сотрудник</td>
-					<td><input type="text" class="search" placeholder="Поиск"></td>
-				</tr>
-				<tr>
-					<td>Формат</td>
-					<td><input type="text" class="search" placeholder="Поиск"></td>
-				</tr>
-				<tr>
-					<td>Объём</td>
-					<td><input type="text" class="search" placeholder="Поиск"></td>
-				</tr>
-				<tr>
-					<td>Тираж</td>
-					<td><input type="text" class="search" placeholder="Поиск"></td>
-				</tr>
-				<tr>
-					<td>Дата исполнения</td>
-					<td><input type="text" class="search" placeholder="Поиск"></td>
-				</tr>
-			</table>
-			<a href="websityPrint.html"><input type="submit" class="buttonSearch" value="Оформить"></a>
-		</div>
+		<form id="co-form" action="" method="post">
+       		{% csrf_token %}
+			<div class="table">
+				<table>
+
+				   <tr>
+						<td>Дата договора</td>
+						<td><input type="date" class="search" name = "contractDate" placeholder="Поиск"></td>
+					</tr>
+					<tr>
+						<td>Автор</td>
+						<td style="font-size: 0;">
+							<select class="search" style = "width: 336px;" name="author_id">
+								{% for author in selectAuthor %}
+								{% include 'SelectAuthorOne.html' %}
+								{% endfor %}
+								<!--<option  >84x108/32</option>
+								<option >84x108/1/32</option>
+								<option>70x90/1/32</option>
+								<option>60x84/8</option>-->
+							</select>
+							<!--<input type="text" class="search" name = "author_id" placeholder="Поиск">-->
+						<a href="websityAuthor.html"><button type="submit" class="buttonSearchPluc"><img src="{% static 'img/+.png' %}"
+						alt="" style="vertical-align:middle" width= "36px" height= "36px"></button></a></td>
+					</tr>
+					<tr>
+						<td>Издательство</td>
+						<td>
+							<select class="search"  name="publishing_id">
+								{% for publishing in selectPublishing %}
+								{% include 'SelectPublishingOne.html' %}
+								{% endfor %}
+								<!--<option  >84x108/32</option>
+								<option >84x108/1/32</option>
+								<option>70x90/1/32</option>
+								<option>60x84/8</option>-->
+							</select>
+							<!--<input type="text" class="search" name = "publishing_id" placeholder="Поиск">-->
+						</td>
+					</tr>
+					<tr>
+						<td>Сотрудник</td>
+						<td>
+							<select class="search"  name="staff_id">
+								{% for staff in selectStaff %}
+								{% include 'SelectStaffOne.html' %}
+								{% endfor %}
+								<!--<option  >84x108/32</option>
+								<option >84x108/1/32</option>
+								<option>70x90/1/32</option>
+								<option>60x84/8</option>-->
+							</select>
+							<!--<input type="text" class="search" name = "staff_id" placeholder="Поиск">-->
+						</td>
+					</tr>
+					<tr>
+						<td>Формат</td>
+						<td>
+							<select class="search" name="format">
+								<option selected>84x108/32</option>
+								<option>84x108/1/32</option>
+								<option>70x90/1/32</option>
+								<option>60x84/8</option>
+							</select>
+							<!--<input type="text" class="search" placeholder="Поиск">-->
+						</td>
+					</tr>
+					<tr>
+						<td>Объём</td>
+						<td><input type="number" class="search" name = "volume" placeholder="Поиск"></td>
+					</tr>
+					<tr>
+						<td>Тираж</td>
+						<td><input type="number" class="search" name = "circulation" placeholder="Поиск"></td>
+					</tr>
+					<tr>
+						<td>Дата исполнения</td>
+						<td><input type="date" class="search" name = "dateExecution" placeholder="Поиск"></td>
+					</tr>
+				</table>
+				<a href="websityPrint.html"><input type="submit" class="buttonSearch" value="Оформить"></a>
+			</div>
+		</form>
 	</body>
 </html>

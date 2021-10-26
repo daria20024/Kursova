@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils import timezone
+from datetime import datetime
 # Create your models here.
 
 
@@ -34,11 +34,11 @@ class staff(models.Model):
 
 
 class contract(models.Model):
-    contractDate = models.DateField(default=timezone.now)
+    contractDate = models.DateField(default=datetime.now, blank=True)
     circulation = models.IntegerField(default=0)
     format = models.CharField(max_length=50)
     volume = models.IntegerField(default=0)
-    dateExecution = models.DateField(default=timezone.now)
+    dateExecution = models.DateField(default=datetime.now, blank=True)
     staff_id = models.ForeignKey(staff, on_delete=models.CASCADE)
     publishing_id = models.ForeignKey(publishing, on_delete=models.CASCADE)
     author_id = models.ForeignKey(author, on_delete=models.CASCADE)

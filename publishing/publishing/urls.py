@@ -24,7 +24,9 @@ urlpatterns = [
     path('websityAuthor.html', Author.as_view()),
     path('websityChangeContract.html', ChangeContract.as_view()),
     path('websityContract.html', Contract.as_view()),
+    path('websityContract1.html', Contract1.as_view()),
     path('websityFormalizeContract.html', FormalizeContract.as_view()),
     path('websityPrint.html', Print.as_view()),
+    path('websityPrint1.html', Print1.as_view()),
     path('websity.html', MainPage.as_view())
 ]
