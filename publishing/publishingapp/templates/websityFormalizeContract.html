@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Издательство</title>
-		<link rel="stylesheet" type="text/css" href="{% static 'css/styleFormalizeContract.css' %}">
+		<link rel="stylesheet" type="text/css" href="static/css/styleFormalizeContract.css">
 	</head>
 	<body>
 		<div>
@@ -23,14 +23,14 @@
 
 				   <tr>
 						<td>Дата договора</td>
-						<td><input type="date" class="search" name = "contractDate" placeholder="Поиск"></td>
+						<td><input type="date" class="search" name = "contractDate" required></td>
 					</tr>
 					<tr>
 						<td>Автор</td>
 						<td style="font-size: 0;">
-							<select class="search" style = "width: 336px;" name="author_id">
+							<select class="search" style = "width: 336px;" name="author_id" required>
 								{% for author in selectAuthor %}
-								{% include 'SelectAuthorOne.html' %}
+								<option value="{{ author.id }}">({{ author.id }}) {{ author.surname }}</option>
 								{% endfor %}
 								<!--<option  >84x108/32</option>
 								<option >84x108/1/32</option>
@@ -38,15 +38,16 @@
 								<option>60x84/8</option>-->
 							</select>
 							<!--<input type="text" class="search" name = "author_id" placeholder="Поиск">-->
-						<a href="websityAuthor.html"><button type="submit" class="buttonSearchPluc"><img src="{% static 'img/+.png' %}"
-						alt="" style="vertical-align:middle" width= "36px" height= "36px"></button></a></td>
+						<a href="websityAuthor.html"><div  class="buttonSearchPluc" style="display:inline-block; height:47px"><!--<button type="submit" class="buttonSearchPluc">-->
+							<!--<img src="{% static 'img/+.png' %}"
+											alt="" style="vertical-align:middle; margin:0 10px" width= "36px" height= "36px">--></div>div><!--</button>--></a></td>
 					</tr>
 					<tr>
 						<td>Издательство</td>
 						<td>
-							<select class="search"  name="publishing_id">
+							<select class="search"  name="publishing_id" required>
 								{% for publishing in selectPublishing %}
-								{% include 'SelectPublishingOne.html' %}
+								<option value="{{ publishing.id }}">({{ publishing.id }}) {{ publishing.title }}</option>
 								{% endfor %}
 								<!--<option  >84x108/32</option>
 								<option >84x108/1/32</option>
@@ -59,10 +60,11 @@
 					<tr>
 						<td>Сотрудник</td>
 						<td>
-							<select class="search"  name="staff_id">
+							<select class="search"  name="staff_id" required>
 								{% for staff in selectStaff %}
-								{% include 'SelectStaffOne.html' %}
+								<option value="{{ staff.id }}">({{ staff.id }}) {{ staff.surname }}</option>
 								{% endfor %}
+
 								<!--<option  >84x108/32</option>
 								<option >84x108/1/32</option>
 								<option>70x90/1/32</option>
@@ -74,7 +76,7 @@
 					<tr>
 						<td>Формат</td>
 						<td>
-							<select class="search" name="format">
+							<select class="search" name="format" required>
 								<option selected>84x108/32</option>
 								<option>84x108/1/32</option>
 								<option>70x90/1/32</option>
@@ -85,15 +87,15 @@
 					</tr>
 					<tr>
 						<td>Объём</td>
-						<td><input type="number" class="search" name = "volume" placeholder="Поиск"></td>
+						<td><input type="number" class="search" name = "volume" required></td>
 					</tr>
 					<tr>
 						<td>Тираж</td>
-						<td><input type="number" class="search" name = "circulation" placeholder="Поиск"></td>
+						<td><input type="number" class="search" name = "circulation" required></td>
 					</tr>
 					<tr>
 						<td>Дата исполнения</td>
-						<td><input type="date" class="search" name = "dateExecution" placeholder="Поиск"></td>
+						<td><input type="date" class="search" name = "dateExecution" required></td>
 					</tr>
 				</table>
 				<a href="websityPrint.html"><input type="submit" class="buttonSearch" value="Оформить"></a>

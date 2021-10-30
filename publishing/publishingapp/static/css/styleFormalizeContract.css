@@ -192,15 +192,15 @@ a{
 .buttonSearchPluc{
 	vertical-align:top;
 	width: 61px;
-	height: 49px;
+	height: 47px;
 	margin-bottom:0;
-	background:#EC823A;
+	background:#EC823A url(../img/+.png) center no-repeat;
 	border:1px solid #742A00;
-	
 }
 
 .buttonSearchPluc:hover{
-	background:#E8E4E1;
+
+	background:#E8E4E1 url(../img/+.png) center no-repeat;
 	
 }
 

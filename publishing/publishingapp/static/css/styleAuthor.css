@@ -61,7 +61,34 @@ h1{
 	color: #FFF;
 	
 }
-.buttonSearch:hover{
+.buttonSearchDiv{
+	position: relative;
+	width: 385px;
+	height: 47px;
+	border:0;
+	/*vertical-align:top;*/
+	/*right:40px;*/
+
+	background: #742A00;
+
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 28px;
+	line-height: 33px;
+
+	color: #FFF;
+	border:1px solid #742A00;
+
+}
+.buttonSearchDiv:after {
+  content: '';
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.buttonSearch:hover, .buttonSearchDiv:hover{
 	background: #E8E4E1;
 	color:#000;
 	border:1px solid #742A00;

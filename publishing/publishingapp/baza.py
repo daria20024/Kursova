@@ -37,3 +37,29 @@ def add_contract(contractDate, circulation, format, volume, dateExecution, staf,
                         publishing_id = publishing.objects.get(id=publish),
                         author_id = author.objects.get(id=auth))
     a_contract.save()
+
+
+def add_author(surname, name, patronymic, address, telephone, passport, mail):
+
+    a_author = author(surname=surname,
+                        name=name,
+                        patronymic=patronymic,
+                        address=address,
+                        telephone = telephone,
+                        passport = passport,
+                        mail = mail)
+    a_author.save()
+
+
+def add_staff(surname, name, patronymic, address, telephone, passport, mail, loginReg, password):
+
+    a_staff = staff(surname=surname,
+                        name=name,
+                        patronymic=patronymic,
+                        address=address,
+                        telephone = telephone,
+                        passport = passport,
+                        mail = mail,
+                        login = loginReg,
+                        password = password)
+    a_staff.save()

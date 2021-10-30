@@ -8,22 +8,33 @@
 	</head>
 	<body>
 		<div class="RegisterNow">
-			 <form action="handler.php">
+			 <form id="staf-form" action="" method="post" >
+				{% csrf_token %}
 			 
 				<p class="text ">Регистрация сотрудника</p>
-				<p class="block"><input class="surname textpole" type="text" name="surname" placeholder="Фамилия"><Br>
-				<input class="name textpole" style="" type="text" name="name" placeholder="Имя"><Br>
-				<input class="patronymic textpole" type="text" name="patronymic" placeholder="Отчество"><Br>
-				<input class="loginRge textpole" type="text" name="loginRge" placeholder="Логин"><Br>
-				<input class="passwordReg textpole" type="password" name="passwordReg" placeholder="Пароль"><Br>
-				<input class="passport textpole" type="text" name="passport" placeholder="Серия и номер паспорта"><Br>
-				<input class="email textpole" type="text" name="email" placeholder="Email"><Br>
-				<input class="telefon textpole" type="text" name="telefon" placeholder="Телефон"><Br>
-				<input class="address textpole" type="text" name="address" placeholder="Адрес"><Br>
-				<!--<input class="accessRights textpole" type="text" name="accessRights" placeholder="Права доступа"><Br></p>-->
-				
+				<p class="block">
+					<input class="surname textpole" type="text" name="surname" placeholder="Фамилия" required><Br>
+					<input class="name textpole" style="" type="text" name="name" placeholder="Имя" required><Br>
+					<input class="patronymic textpole" type="text" name="patronymic" placeholder="Отчество" required><Br>
+					<input class="loginRge textpole" type="text" name="loginReg" placeholder="Логин" required><Br>
+					<input class="passwordReg textpole" type="password" name="passwordReg" placeholder="Пароль" required><Br>
+					<input class="passport textpole" type="text" name="passport" placeholder="Серия и номер паспорта" required><Br>
+					<input class="email textpole" type="text" name="email" placeholder="Email" required><Br>
+					<input class="telefon textpole" type="text" name="telephone" placeholder="Телефон" required><Br>
+					<input class="address textpole" type="text" name="address" placeholder="Адрес" required><Br>
+				</p>
+
+				 <p class="buttonRegisterP" style="display:block; text-align: center;" >
+				 	<a href="websity.html" style="display:inline-block">
+					 	<input type="submit" class="buttonRegisterNow" value="Зарегистрироваться">
+				 	</a>
+				 	<a href="websity.html" style="display:inline-block; text-decoration:none" class="buttonRegisterNow">
+						Назад
+				 	</a>
+				 </p>
 			 </form>
-			 <a href="websity.html"><p class="buttonRegisterP"><input type="submit" class="buttonRegisterNow" value="Зарегистрироваться"></p></a>
+
+
 		</div>
 	</body>
 </html>

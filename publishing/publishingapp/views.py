@@ -35,6 +35,23 @@ class Author(View):
         context = {}
         return render(request, 'websityAuthor.html', context=context)
 
+    def post(self, request):
+        context = {}
+        surname = request.POST.get("surname")
+        name = request.POST.get("name")
+        patronymic = request.POST.get("patronymic")
+        address = request.POST.get("address")
+        telephone = request.POST.get("telephone")
+        passport = request.POST.get("passport")
+        mail = request.POST.get("mail")
+
+        if context:
+            return render(request, "websityAuthor.html", context=context)
+        else:
+            add_author(surname, name, patronymic, address, telephone, passport, mail)
+
+            return HttpResponseRedirect('websityFormalizeContract.html')
+
 
 class ChangeContract(View):
     def get(self,request):
@@ -85,13 +102,11 @@ class FormalizeContract(View):
 
 
 
-        if context:
-            return render(request, "websityFormalizeContract.html", context=context)
-        else:
-            add_contract(contractDate, circulation, format, volume, dateExecution, staff_id, publishing_id,
+
+        add_contract(contractDate, circulation, format, volume, dateExecution, staff_id, publishing_id,
                       author_id)
 
-            return HttpResponseRedirect('websityContract.html')
+        return HttpResponseRedirect('websityContract.html')
 
 
 class Print(View):
@@ -110,3 +125,22 @@ class Registration(View):
     def get(self,request):
         context = {}
         return render(request, 'websityReg.html', context=context)
+
+    def post(self, request):
+        context = {}
+        surname = request.POST.get("surname")
+        name = request.POST.get("name")
+        patronymic = request.POST.get("patronymic")
+        address = request.POST.get("address")
+        telephone = request.POST.get("telephone")
+        passport = request.POST.get("passport")
+        mail = request.POST.get("email")
+        loginReg = request.POST.get("loginReg")
+        password = request.POST.get("passwordReg")
+
+        if context:
+            return render(request, "websityReg.html", context=context)
+        else:
+            add_staff(surname, name, patronymic, address, telephone, passport, mail, loginReg, password)
+
+            return HttpResponseRedirect('websity.html')

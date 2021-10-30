@@ -9,42 +9,48 @@
 	<body>
 		
 		<h1>Добавление автора в базу данных</h1>
-		
+
 		<div class="table">
-			<table>
-				
-			   <tr>
-					<td>Фамилия</td>
-					<td><input type="text" class="search" placeholder="Поиск"></td>
-				</tr>
-				<tr>
-					<td>Имя</td>
-					<td><input type="text" class="search" placeholder="Поиск"></td>
-				</tr>
-				<tr>
-					<td>Отчество</td>
-					<td><input type="text" class="search" placeholder="Поиск"></td>
-				</tr>
-				<tr>
-					<td>Телефон</td>
-					<td><input type="text" class="search" placeholder="Поиск"></td>
-				</tr>
-				<tr>
-					<td>Адрес</td>
-					<td><input type="text" class="search" placeholder="Поиск"></td>
-				</tr>
-				<tr>
-					<td>Серия и номер паспорта</td>
-					<td><input type="text" class="search" placeholder="Поиск"></td>
-				</tr>
-				<tr>
-					<td>Почта</td>
-					<td><input type="text" class="search" placeholder="Поиск"></td>
-				</tr>
-				
-			</table>
-			<a href="websityChangeContract.html"><input type="submit" class="buttonSearch" value="Добавить"></a>
-			<a href="websityChangeContract.html"><input type="submit" class="buttonSearch" value="Назад"></a>
+			<form id="aut-form" action="" method="post" >
+				{% csrf_token %}
+				<table>
+
+					<tr>
+						<td>Фамилия</td>
+						<td><input type="text" class="search" name="surname" required></td>
+					</tr>
+					<tr>
+						<td>Имя</td>
+						<td><input type="text" class="search" name="name" required></td>
+					</tr>
+					<tr>
+						<td>Отчество</td>
+						<td><input type="text" class="search" name="patronymic" required></td>
+					</tr>
+					<tr>
+						<td>Телефон</td>
+						<td><input type="text" class="search" name="address" placeholder="81111555666" required></td>
+					</tr>
+					<tr>
+						<td>Адрес</td>
+						<td><input type="text" class="search" name="telephone" placeholder="г. Орел ул. Ленина 5 кв. 2" required></td>
+					</tr>
+					<tr>
+						<td>Серия и номер паспорта</td>
+						<td><input type="text" class="search" name="passport" placeholder="1111444444" required></td>
+					</tr>
+					<tr>
+						<td>Почта</td>
+						<td><input type="text" class="search" name="mail" placeholder="daser@gmail.com" required></td>
+					</tr>
+
+				</table>
+				<a href="websityFormalizeContract.html"><input type="submit" class="buttonSearch" value="Добавить"></a>
+				<a href="websityFormalizeContract.html" style=" text-decoration:none">
+					<div class="buttonSearchDiv" style="display: inline-block;vertical-align:top;text-align: center;">Назад</div>
+				</a>
+			</form>
+
 		</div>
 	</body>
 </html>
