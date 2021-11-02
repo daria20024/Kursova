@@ -67,6 +67,22 @@ class Contract(View):
         }
         return render(request, 'websityContract.html', context=context)
 
+    def post(self, request):
+        context = {}
+        surname = request.POST.get("qwe")
+
+        if request.POST.get("print"):
+            return render(request, "websityPrint.html", context=context)
+        elif request.POST.get("delete"):
+            if surname:
+                delete(surname)
+            contractss = get_contract()
+            context = {
+                'contractss': contractss
+            }
+            return render(request, "websityContract.html", context=context)
+        elif request.POST.get("update"):
+            return render(request, "websityFormalizeContract.html", context=context)
 
 class Contract1(View):
     def get(self,request):

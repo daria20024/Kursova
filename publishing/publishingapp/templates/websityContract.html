@@ -46,8 +46,10 @@
 		</form>
 		</div>
 		<div class="table">
-			<table>
+			<form id="staf-form" action="" method="post" >{% csrf_token %}
+				<table>
 				<tr>
+					<th></th>
 					<th>ID</th>
 					<th>Дата договора</th>
 					<th>Дата исполнения</th>
@@ -173,10 +175,13 @@
 				</tr>-->
 			</table>
 			<div class="button">
-				<a href="websityPrint.html"><input type="submit" class="buttonStyle buttonPrint" value="Печатать"></a>
-				<a href="websityChangeContract.html"><input type="submit" class="buttonStyle buttonEdit" value="Редактировать"></a>
-				<input type="submit" class="buttonStyle buttonDelete" value="Удалить">
-			</div>
+
+
+				<a href="websityPrint.html"><input type="submit" class="buttonStyle buttonPrint" name="print" value="Печатать"></a>
+				<a href="websityChangeContract.html"><input type="submit" class="buttonStyle buttonEdit" name="update" value="Редактировать"></a>
+				<input type="submit" class="buttonStyle buttonDelete" name="delete" value="Удалить">
+
+			</div></form>
 		</div>
 		<script>
 /* Когда пользователь нажимает на кнопку, переключаться раскрывает содержимое */

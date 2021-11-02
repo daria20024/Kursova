@@ -218,6 +218,7 @@ table{
 	text-align: center;
 
 	color: #0B0B0B;
+	background:#fff;
 	
 }
 tr{
@@ -225,15 +226,18 @@ tr{
 	height: 52px;
 	border:1px solid black;
 }
+tr:focus, tr:hover{
+    background-color:#BFBEBB;
+}
 th{
 	
 	background: #F9B384;
 	border:1px solid black;
 }
 td{
-	
+	height: 52px;
 	border:1px solid black;
-	background: #fff;
+	/*background: #fff;*/
 }
 
 .buttonStyle{
@@ -299,6 +303,11 @@ td{
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+}
+
+label{
+    display:block;
+    height:100%;
 }
 
 .dropdown a:hover {background-color: #ddd;}

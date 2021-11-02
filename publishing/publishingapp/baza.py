@@ -63,3 +63,9 @@ def add_staff(surname, name, patronymic, address, telephone, passport, mail, log
                         login = loginReg,
                         password = password)
     a_staff.save()
+
+
+def delete(id):
+    person = contract.objects.get(id=id)
+    person.delete()
+

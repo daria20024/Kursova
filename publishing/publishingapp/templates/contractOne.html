@@ -1,13 +1,14 @@
 {% block content %}
-<tr>
-	<td>{{ contract.id }}</td>
-	<td>{{ contract.contractDate }}</td>
-	<td>{{ contract.dateExecution }}</td>
-	<td>{{ contract.format }}</td>
-	<td>{{ contract.volume }}</td>
-	<td>{{ contract.circulation }}</td>
-	<td>{{ contract.staff_id }}</td>
-	<td>{{ contract.publishing_id }}</td>
-	<td>{{ contract.author_id }}</td>
+<tr tabindex="0">
+	<td><input type="radio" id="check{{ contract.id }}" name="qwe" value="{{ contract.id }}"/></td>
+	<td><label for="check{{ contract.id }}">{{ contract.id }}</label></td>
+	<td><label for="check{{ contract.id }}">{{ contract.contractDate }}</label></td>
+	<td><label for="check{{ contract.id }}">{{ contract.dateExecution }}</label></td>
+	<td><label for="check{{ contract.id }}">{{ contract.format }}</label></td>
+	<td><label for="check{{ contract.id }}">{{ contract.volume }}</label></td>
+	<td><label for="check{{ contract.id }}">{{ contract.circulation }}</label></td>
+	<td><label for="check{{ contract.id }}">{{ contract.staff_id }}</label></td>
+	<td><label for="check{{ contract.id }}">{{ contract.publishing_id }}</label></td>
+	<td><label for="check{{ contract.id }}">{{ contract.author_id }}</label></td>
 </tr>
 {% endblock %}
