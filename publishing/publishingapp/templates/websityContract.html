@@ -40,9 +40,10 @@
 		  </div>
 		</div>
 		<div style="display:inline-block; float:right">
-		<form style="display:inline-block;">
-			<p style="display:inline-block;float:right;vertical-align:top"><input type="text" class="search" placeholder="Поиск">
-			<button type="submit" class="buttonSearch"><img src="{% static 'img/лупа.png' %}" alt="" style="vertical-align:middle" width= "36px" height= "36px"></button></p>
+		<form id="coSe-form" action="" method="post">
+       		{% csrf_token %}
+			<p style="display:inline-block;float:right;vertical-align:top"><input type="text" class="search" name="search" placeholder="Поиск">
+			<input type="submit" class="buttonSearch" name="searchButton"><img src="{% static 'img/лупа.png' %}" alt="" style="vertical-align:middle" width= "36px" height= "36px"></p>
 		</form>
 		</div>
 		<div class="table">
