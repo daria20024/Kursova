@@ -49,8 +49,40 @@ class Author(View):
             return render(request, "websityAuthor.html", context=context)
         else:
             add_author(surname, name, patronymic, address, telephone, passport, mail)
-
             return HttpResponseRedirect('websityFormalizeContract.html')
+
+
+class Author1(View):
+    def get(self,request):
+        context = {}
+        return render(request, 'websityAuthor1.html', context=context)
+
+    def post(self, request):
+        context = {}
+        surname = request.POST.get("surname")
+        name = request.POST.get("name")
+        patronymic = request.POST.get("patronymic")
+        address = request.POST.get("address")
+        telephone = request.POST.get("telephone")
+        passport = request.POST.get("passport")
+        mail = request.POST.get("mail")
+
+        if context:
+            return render(request, "websityAuthor1.html", context=context)
+        else:
+            add_author(surname, name, patronymic, address, telephone, passport, mail)
+            '''id = request.POST.get("id")
+            idContract = get_contract_id(id)
+            selectAuthor = get_author()
+            selectPublishing = get_push()
+            selectStaff = get_staff()
+            context = {
+                'selectAuthor': selectAuthor,
+                'selectPublishing': selectPublishing,
+                'selectStaff': selectStaff,
+                'idContract': idContract,
+            }'''
+            return render(request, "websityChangeContract.html", context=context)
 
 
 class ChangeContract(View):
@@ -60,7 +92,6 @@ class ChangeContract(View):
 
     def post(self, request):
         context = {}
-        print("@@@@@@@@@@@@@@@@@@@@@@@@@@@2")
         id = request.POST.get("id")
         contractDate = request.POST.get("contractDate")
         circulation = request.POST.get("circulation")
@@ -135,7 +166,7 @@ class Contract(View):
                     'contractss': contractss
                 }
                 return render(request, 'websityContract.html', context=context)
-        if request.POST.get("searchButton"):
+        if 'searchButton' in request.POST:
             searchs = request.POST.get("search")
             if searchs:
                 contractss = search(searchs)
@@ -145,9 +176,66 @@ class Contract(View):
                 'contractss': contractss
             }
             return render(request, "websityContract.html", context=context)
+        elif 'sort1' in request.POST:
+            sort = request.POST.get("Sort")
+            contractss = sort_id(sort)
+            context = {
+                'contractss': contractss
+            }
+            return render(request, "websityContract.html", context=context)
+        elif 'onContract' in request.POST:
+            contractss = get_contract()
+            context = {
+                'contractss': contractss
+            }
+            if request.session["priv_user"] == "0":
+                return render(request, 'websityContract.html', context=context)
+            else:
+                return render(request, 'websityContract1.html', context=context)
+        elif 'plus' in request.POST:
+            id = request.POST.get("id")
+            idContract = get_contract_id(id)
+            '''selectAuthor = get_author()
+            selectPublishing = get_push()
+            selectStaff = get_staff()'''
+            context = {
+                'idContract': idContract
+            }
+            return render(request, "websityAuthor1.html", context=context)
+        elif 'back' in request.POST:
+            id = request.POST.get("id")
+            idContract = get_contract_id(id)
+            context = {
+                'idContract': idContract,
+            }
+            return render(request, "websityChangeContract.html", context=context)
+        elif request.POST.get("addAuthor"):
+            surname = request.POST.get("surname")
+            name = request.POST.get("name")
+            patronymic = request.POST.get("patronymic")
+            address = request.POST.get("address")
+            telephone = request.POST.get("telephone")
+            passport = request.POST.get("passport")
+            mail = request.POST.get("mail")
+
+            add_author(surname, name, patronymic, address, telephone, passport, mail)
+
+            id = request.POST.get("id")
+            idContract = get_contract_id(id)
+            selectAuthor = get_author()
+            selectPublishing = get_push()
+            selectStaff = get_staff()
+            context = {
+                'selectAuthor': selectAuthor,
+                'selectPublishing': selectPublishing,
+                'selectStaff': selectStaff,
+                'idContract': idContract,
+            }
+            return render(request, "websityChangeContract.html", context=context)
+
         else:
-            print(request.POST.get("search"))
-            return HttpResponseRedirect('websity.html')
+            return HttpResponseRedirect('websityContract.html')
+
 
 class Contract1(View):
     def get(self,request):
@@ -156,6 +244,45 @@ class Contract1(View):
            'contractss': contractss
         }
         return render(request, 'websityContract1.html', context=context)
+
+    def post(self, request):
+        context = {}
+        id = request.POST.get("id")
+        if id:
+            idContract = get_contract_id(id)
+            if request.POST.get("print"):
+                context = {
+                    'idContract': idContract,
+                }
+                return render(request, "websityPrint.html", context=context)
+        if 'searchButton' in request.POST:
+            searchs = request.POST.get("search")
+            if searchs:
+                contractss = search(searchs)
+            else:
+                contractss = get_contract()
+            context = {
+                'contractss': contractss
+            }
+            return render(request, "websityContract1.html", context=context)
+        elif 'sort1' in request.POST:
+            sort = request.POST.get("Sort")
+            contractss = sort_id(sort)
+            context = {
+                'contractss': contractss
+            }
+            return render(request, "websityContract1.html", context=context)
+        elif 'onContract' in request.POST:
+            contractss = get_contract()
+            context = {
+                'contractss': contractss
+            }
+            if request.session["priv_user"] == "0":
+                return render(request, 'websityContract.html', context=context)
+            else:
+                return render(request, 'websityContract1.html', context=context)
+        else:
+            return HttpResponseRedirect('websityContract1.html')
 
 
 class FormalizeContract(View):
@@ -181,9 +308,6 @@ class FormalizeContract(View):
         publishing_id = request.POST.get("publishing_id")
         author_id = request.POST.get("author_id")
 
-
-
-
         add_contract(contractDate, circulation, format, volume, dateExecution, staff_id, publishing_id,
                       author_id)
 
@@ -197,6 +321,16 @@ class Print(View):
             'contractss': contractss
         }
         return render(request, 'websityPrint.html', context=context)
+
+    def post(self, request):
+        contractss = get_contract()
+        context = {
+            'contractss': contractss
+        }
+        if request.session["priv_user"] == "0":
+            return render(request, 'websityContract.html', context=context)
+        else:
+            return render(request, 'websityContract1.html', context=context)
 
 
 class Print1(View):

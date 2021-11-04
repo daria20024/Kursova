@@ -37,9 +37,14 @@
 								<option>60x84/8</option>-->
 							</select>
 							<!--<input type="text" class="search" name = "author_id" placeholder="Поиск">-->
-						<a href="websityAuthor.html"><div  class="buttonSearchPluc" style="display:inline-block; height:47px"><!--<button type="submit" class="buttonSearchPluc">-->
+							<!--<a href="websityAuthor1.html"><div  class="buttonSearchPluc" style="display:inline-block; height:47px">-->
+							<a href="websityContract.html">
+							<button type="submit" name="plus" class="buttonSearchPluc">
 							<!--<img src="{% static 'img/+.png' %}"
-											alt="" style="vertical-align:middle; margin:0 10px" width= "36px" height= "36px">--></div>div><!--</button>--></a></td>
+											alt="" style="vertical-align:middle; margin:0 10px" width= "36px" height= "36px">-->
+						<!--</div>--></button>
+							</a>
+						</td>
 					</tr>
 					<tr>
 						<td>Издательство</td>
@@ -89,11 +94,11 @@
 					</tr>
 					<tr>
 						<td>Объём</td>
-						<td><input type="number" class="search" name = "volume" value="{{ idContract.volume }}" ></td>
+						<td><input type="number" class="search" name = "volume" min = 0 value="{{ idContract.volume }}" ></td>
 					</tr>
 					<tr>
 						<td>Тираж</td>
-						<td><input type="number" class="search" name = "circulation" value="{{ idContract.circulation }}" ></td>
+						<td><input type="number" class="search" name = "circulation" min = 0 value="{{ idContract.circulation }}" ></td>
 					</tr>
 					<tr>
 						<td>Дата исполнения</td>

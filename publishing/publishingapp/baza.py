@@ -43,6 +43,30 @@ def autoriz(login, passw):
     return users
 
 
+def sort_id(sort):
+    if sort == 'ID':
+        users = contract.objects.order_by('id')
+    elif sort == 'contractDate':
+        users = contract.objects.order_by('contractDate')
+    elif sort == 'circulation':
+        users = contract.objects.order_by('circulation')
+    elif sort == 'format':
+        users = contract.objects.order_by('format')
+    elif sort == 'volume':
+        users = contract.objects.order_by('volume')
+    elif sort == 'dateExecution':
+        users = contract.objects.order_by('dateExecution')
+    elif sort == 'staff_id':
+        users = contract.objects.order_by('staff_id')
+    elif sort == 'publishing_id':
+        users = contract.objects.order_by('publishing_id')
+    elif sort == 'author_id':
+        users = contract.objects.order_by('author_id')
+    else:
+        users = contract.objects.order_by('id')
+    return users
+
+
 def search(word):
     '''searchs = contract.objects.filter(Q(id=word) | Q(contractDate=word) | Q(circulation=word) | Q(format=word) |
                                     Q(volume=word) | Q(dateExecution=word) | Q(staf=word) | Q(publish=word) |

@@ -7,7 +7,10 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'css/stylePrint.css' %}">
 	</head>
 	<body>
-		<div class="a"><a href="websityContract.html"><input type="submit" class="buttonSearch" value="На главную"></a></div>
+	<form id="coCh-form" action="" method="post">
+       		{% csrf_token %}
+		<div class="a"><a href="websityContract.html"><input type="submit" name="onContract" class="buttonSearch" value="На главную"></a></div>
+	</form>
 		<div class="block">
 
 

@@ -22,6 +22,7 @@ urlpatterns = [
     path('', MainPage.as_view()),
     path('websityReg.html', Registration.as_view()),
     path('websityAuthor.html', Author.as_view()),
+    path('websityAuthor1.html', Author1.as_view()),
     path('websityChangeContract.html', ChangeContract.as_view()),
     path('websityContract.html', Contract.as_view()),
     path('websityContract1.html', Contract1.as_view()),
