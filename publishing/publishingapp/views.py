@@ -71,17 +71,7 @@ class Author1(View):
             return render(request, "websityAuthor1.html", context=context)
         else:
             add_author(surname, name, patronymic, address, telephone, passport, mail)
-            '''id = request.POST.get("id")
-            idContract = get_contract_id(id)
-            selectAuthor = get_author()
-            selectPublishing = get_push()
-            selectStaff = get_staff()
-            context = {
-                'selectAuthor': selectAuthor,
-                'selectPublishing': selectPublishing,
-                'selectStaff': selectStaff,
-                'idContract': idContract,
-            }'''
+
             return render(request, "websityChangeContract.html", context=context)
 
 
@@ -195,9 +185,7 @@ class Contract(View):
         elif 'plus' in request.POST:
             id = request.POST.get("id")
             idContract = get_contract_id(id)
-            '''selectAuthor = get_author()
-            selectPublishing = get_push()
-            selectStaff = get_staff()'''
+
             context = {
                 'idContract': idContract
             }

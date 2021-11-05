@@ -68,22 +68,22 @@ def sort_id(sort):
 
 
 def search(word):
-    '''searchs = contract.objects.filter(Q(id=word) | Q(contractDate=word) | Q(circulation=word) | Q(format=word) |
-                                    Q(volume=word) | Q(dateExecution=word) | Q(staf=word) | Q(publish=word) |
-                isinstance()                    Q(auth=word))'''
     try:
         word = int(word)
         searchs = contract.objects.filter(Q(id=word) | Q(circulation=word) | Q(volume=word))
-        '''except ValueError:
-        word = datetime.datetime.strptime(word, '%b %d %Y %I:%M%p')
-        print(word.date())
-        searchs = contract.objects.filter(Q(contractDate=word.date()) | Q(dateExecution=word.date()))'''
     except BaseException:
-        searchs = contract.objects.filter(Q(format=word))
-
-    '''if isinstance(int(word), int):word.date()
-        searchs = contract.objects.filter(Q(id=int(word))  | Q(circulation=word) | Q(format=word))
-    elif isinstance(word, str):'''
+        contracts = contract.objects.all()
+        wordA = 0
+        wordP = 0
+        wordS = 0
+        for c in contracts:
+            if c.publishing_id.title == word:
+                wordP = c.publishing_id
+            if c.staff_id.surname == word:
+                wordS = c.staff_id
+            if c.author_id.surname == word:
+                wordA = c.author_id
+        searchs = contract.objects.filter(Q(format=word)| Q(publishing_id=wordP) | Q(staff_id=wordS) | Q(author_id=wordA))
 
     return searchs
 

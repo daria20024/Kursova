@@ -18,9 +18,9 @@
 					<input class="patronymic textpole" type="text" name="patronymic" placeholder="Отчество" required><Br>
 					<input class="loginRge textpole" type="text" name="loginReg" placeholder="Логин" required><Br>
 					<input class="passwordReg textpole" type="password" name="passwordReg" placeholder="Пароль" required><Br>
-					<input class="passport textpole" type="text" name="passport" placeholder="Серия и номер паспорта" required><Br>
-					<input class="email textpole" type="text" name="email" placeholder="Email" required><Br>
-					<input class="telefon textpole" type="text" name="telephone" placeholder="Телефон" required><Br>
+					<input class="passport textpole" type="text" name="passport" placeholder="Серия и номер паспорта: 1234567890" minlength="10" maxlength="10" pattern="[0-9]{10}" required><Br>
+					<input class="email textpole" type="email" name="email" placeholder="Email" required><Br>
+					<input class="telefon textpole" type="tel" name="telephone" placeholder="Тел: 89123456789" pattern="[0-9]{11}" required><Br>
 					<input class="address textpole" type="text" name="address" placeholder="Адрес" required><Br>
 				</p>
 

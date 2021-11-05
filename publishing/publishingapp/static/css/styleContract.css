@@ -205,7 +205,7 @@ a{
 	
 }
 
-table{
+.tableContract{
 	width:100%;
 	border-collapse:collapse;
 	border:1px solid black;
@@ -221,20 +221,20 @@ table{
 	background:#fff;
 	
 }
-tr{
+.tableContract tr{
 
 	height: 52px;
 	border:1px solid black;
 }
-tr:focus, tr:hover{
+.tableContract tr:focus, .tableContract tr:hover{
     background-color:#BFBEBB;
 }
-th{
+.tableContract th{
 	
 	background: #F9B384;
 	border:1px solid black;
 }
-td{
+.tableContract td{
 	height: 52px;
 	border:1px solid black;
 	/*background: #fff;*/
@@ -295,7 +295,7 @@ td{
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
   z-index: 1000;
   left: 29px;
-  width: 218px;
+  width: 436px;
 }
 
 .dropdown-content a {
@@ -314,7 +314,19 @@ label{
 
 .show {display: block;}
 
-
+.tableSort{
+    width:100%;
+	border-collapse:collapse;
+}
+.tableSort td{
+    border:0;
+}
+.tableSort td:hover{
+    background-color:#BFBEBB;
+}
+.tableSort tr{
+    border:0;
+}
 @media screen and (max-width:1024px) { 
 	table{
 		font-size: 20px;

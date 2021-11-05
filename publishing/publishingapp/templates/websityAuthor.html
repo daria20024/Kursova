@@ -29,7 +29,7 @@
 					</tr>
 					<tr>
 						<td>Телефон</td>
-						<td><input type="text" class="search" name="address" placeholder="81111555666" required></td>
+						<td><input type="tel" class="search" name="address" placeholder="Тел: 89123456789" pattern="[0-9]{11}" required></td>
 					</tr>
 					<tr>
 						<td>Адрес</td>
@@ -37,11 +37,11 @@
 					</tr>
 					<tr>
 						<td>Серия и номер паспорта</td>
-						<td><input type="text" class="search" name="passport" placeholder="1111444444" required></td>
+						<td><input type="text" class="search" name="passport" placeholder="1234567890" minlength="10" maxlength="10" pattern="[0-9]{10}" required></td>
 					</tr>
 					<tr>
 						<td>Почта</td>
-						<td><input type="text" class="search" name="mail" placeholder="daser@gmail.com" required></td>
+						<td><input type="email" class="search" name="mail" placeholder="daser@gmail.com" required></td>
 					</tr>
 
 				</table>
