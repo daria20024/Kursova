@@ -38,8 +38,18 @@ def get_staff():
     return staffs
 
 
-def autoriz(login, passw):
-    users = staff.objects.filter(login=login, password=passw)
+def autoriz(login, password):
+    users = staff.objects.filter(login=login, password=password)
+    return users
+
+
+def loginSearch(login):
+    users = staff.objects.filter(login=login)
+    return users
+
+
+def passwordSearch(password):
+    users = staff.objects.filter(password=password)
     return users
 
 

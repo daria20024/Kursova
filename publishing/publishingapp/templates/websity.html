@@ -11,6 +11,7 @@
 			<form method="post" action="" name="login_user">
 				{% csrf_token %}
 				<p class="text">Войти</p>
+
 				<p class="block"><input class="login" type="text" name="login" placeholder="Логин"><Br>
 				<input type="text" class="password" style = "margin-bottom:10px;" name="password" placeholder="Пароль"><Br></p>
 				<a href="websityContract.html"><p class="blockBut"><input type="submit" class="buttonComeIn" value="Войти"></p></a>
@@ -20,6 +21,7 @@
 
 			 <a href="websityReg.html"><p class="blockBut textOR" style="margin-top:10px;">
 			 <button type="submit" class="buttonRegisterNow ">Зарегистрироваться</button></p></a>
+			<p class="text" style="color:red; margin-top:0;font-size: 40px;">{{ message }}</p>
 		</div>
 	</body>
 </html>

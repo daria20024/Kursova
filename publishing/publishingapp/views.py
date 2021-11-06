@@ -343,10 +343,22 @@ class Registration(View):
         mail = request.POST.get("email")
         loginReg = request.POST.get("loginReg")
         password = request.POST.get("passwordReg")
-
-        if context:
-            return render(request, "websityReg.html", context=context)
+        loginSeach = loginSearch(loginReg)
+        passwordSeach = passwordSearch(password)
+        if loginSeach:
+            context = {
+                "message": "Логин уже занят"
+            }
+            return render(request, 'websityReg.html', context=context)
+        elif passwordSeach:
+            context = {
+                "message": "Пароль уже занят"
+            }
+            return render(request, 'websityReg.html', context=context)
         else:
             add_staff(surname, name, patronymic, address, telephone, passport, mail, loginReg, password)
 
             return HttpResponseRedirect('websity.html')
+
+        ''' if context:
+                    return render(request, "websityReg.html", context=context)'''

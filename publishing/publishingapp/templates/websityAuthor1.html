@@ -20,23 +20,23 @@
 					</tr>
 					<tr>
 						<td>Фамилия</td>
-						<td><input type="text" class="search" name="surname" required></td>
+						<td><input type="text" class="search" name="surname" maxlength="50" required></td>
 					</tr>
 					<tr>
 						<td>Имя</td>
-						<td><input type="text" class="search" name="name" required></td>
+						<td><input type="text" class="search" name="name" maxlength="50" required></td>
 					</tr>
 					<tr>
 						<td>Отчество</td>
-						<td><input type="text" class="search" name="patronymic" required></td>
+						<td><input type="text" class="search" name="patronymic" maxlength="50" required></td>
 					</tr>
 					<tr>
 						<td>Телефон</td>
-						<td><input type="text" class="search" name="address" placeholder="Тел: 89123456789" pattern="[0-9]{11}" required></td>
+						<td><input type="text" class="search" name="telephone" placeholder="Тел: 89123456789" pattern="[0-9]{11}" minlength="11" maxlength="11" required></td>
 					</tr>
 					<tr>
 						<td>Адрес</td>
-						<td><input type="text" class="search" name="telephone" placeholder="г. Орел ул. Ленина 5 кв. 2" required></td>
+						<td><input type="text" class="search" name="address" placeholder="г. Орел ул. Ленина 5 кв. 2" maxlength="100" required></td>
 					</tr>
 					<tr>
 						<td>Серия и номер паспорта</td>
@@ -44,7 +44,7 @@
 					</tr>
 					<tr>
 						<td>Почта</td>
-						<td><input type="email" class="search" name="mail" placeholder="daser@gmail.com" required></td>
+						<td><input type="email" class="search" name="mail" placeholder="daser@gmail.com" maxlength="50" required></td>
 					</tr>
 
 				</table>
