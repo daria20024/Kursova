@@ -98,6 +98,11 @@ def search(word):
     return searchs
 
 
+def searchDate(word):
+    searchs = contract.objects.filter(Q(contractDate=word)| Q(dateExecution=word))
+    return searchs
+
+
 def add_contract(contractDate, circulation, format, volume, dateExecution, staf, publish, auth):
 
     a_contract = contract(contractDate=contractDate,

@@ -12,17 +12,33 @@
 				{% csrf_token %}
 			 
 				<p class="text ">Регистрация сотрудника</p>
-				<p class="block">
-					<input class="surname textpole" type="text" name="surname" placeholder="Фамилия" maxlength="50" required><Br>
-					<input class="name textpole" style="" type="text" name="name" placeholder="Имя" maxlength="50" required ><Br>
-					<input class="patronymic textpole" type="text" name="patronymic" placeholder="Отчество" maxlength="50" required><Br>
-					<input class="loginRge textpole" type="text" name="loginReg" placeholder="Логин" minlength="6" maxlength="30" required><Br>
-					<input class="passwordReg textpole" type="password" name="passwordReg" placeholder="Пароль" minlength="6" maxlength="30" required><Br>
-					<input class="passport textpole" type="text" name="passport" placeholder="Серия и номер паспорта: 1234567890" minlength="10" maxlength="10" pattern="[0-9]{10}" required><Br>
-					<input class="email textpole" type="email" name="email" placeholder="Email" maxlength="50" required><Br>
-					<input class="telefon textpole" type="tel" name="telephone" placeholder="Тел: 89123456789" pattern="[0-9]{11}" minlength="11" maxlength="11" required><Br>
-					<input class="address textpole" type="text" name="address" placeholder="Адрес" maxlength="100" required><Br>
-				</p>
+				 <div class="block">
+
+
+
+			Фамилия<div><input class="surname textpole" type="text" name="surname" placeholder="Фамилия" maxlength="50" required></div><Br>
+					Имя<div><input class="name textpole" style="" type="text" name="name" placeholder="Имя" maxlength="50" required ></div><Br>
+					Отчество<div ><input class="patronymic textpole" type="text" name="patronymic" placeholder="Отчество" maxlength="50" required></div><Br>
+					Логин<div><input class="loginRge textpole" type="text" name="loginReg" placeholder="Логин" minlength="6" maxlength="30" required></div><Br>
+					Пароль<div ><input class="passwordReg textpole" type="password" name="passwordReg" placeholder="Пароль" minlength="6" maxlength="30" required></div><Br>
+					Серия и номер паспорта<div><input class="passport textpole" type="text" name="passport" placeholder="Серия и номер паспорта: 1234567890" minlength="10" maxlength="10" pattern="[0-9]{10}" required></div><Br>
+					Email<div ><input class="email textpole" type="email" name="email" placeholder="" maxlength="50" required></div><Br>
+					Телефон<div><input class="telefon textpole" type="tel" name="telephone" placeholder="Тел: 89123456789" pattern="[0-9]{11}" minlength="11" maxlength="11" required></div><Br>
+					Адрес<div><input class="address textpole" type="text" name="address" placeholder="Адрес" maxlength="100" required></div><Br>
+
+			</div>
+				<!--<div class="block">
+
+					<div><input class="surname textpole" type="text" name="surname" placeholder="Фамилия" maxlength="50" required></div><Br>
+					<div><input class="name textpole" style="" type="text" name="name" placeholder="Имя" maxlength="50" required ></div><Br>
+					<div ><input class="patronymic textpole" type="text" name="patronymic" placeholder="Отчество" maxlength="50" required></div><Br>
+					<div><input class="loginRge textpole" type="text" name="loginReg" placeholder="Логин" minlength="6" maxlength="30" required></div><Br>
+					<div ><input class="passwordReg textpole" type="password" name="passwordReg" placeholder="Пароль" minlength="6" maxlength="30" required></div><Br>
+					<div><input class="passport textpole" type="text" name="passport" placeholder="Серия и номер паспорта: 1234567890" minlength="10" maxlength="10" pattern="[0-9]{10}" required></div><Br>
+					<div ><input class="email textpole" type="email" name="email" placeholder="Email" maxlength="50" required></div><Br>
+					<div><input class="telefon textpole" type="tel" name="telephone" placeholder="Тел: 89123456789" pattern="[0-9]{11}" minlength="11" maxlength="11" required></div><Br>
+					<div><input class="address textpole" type="text" name="address" placeholder="Адрес" maxlength="100" required></div><Br>
+				</div>-->
 
 				 <p class="buttonRegisterP" style="display:block; text-align: center;" >
 				 	<a href="websity.html" style="display:inline-block">

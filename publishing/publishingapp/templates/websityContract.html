@@ -106,6 +106,8 @@
        		{% csrf_token %}
 			<p style="display:inline-block;float:right;vertical-align:top"><input type="text" class="search" name="search" placeholder="Поиск">
 			<button type="submit" class="buttonSearch" name="searchButton"><img src="{% static 'img/лупа.png' %}" alt="" style="vertical-align:middle" width= "36px" height= "36px"></button></p>
+			<p style="display:inline-block;float:right;vertical-align:top"><input type="date" class="searchDate" name="searchDate" placeholder="Поиск">
+			<button type="submit" class="buttonSearch" name="searchButtonDate"><img src="{% static 'img/лупа.png' %}" alt="" style="vertical-align:middle" width= "36px" height= "36px"></button></p>
 		</form>
 		</div>
 		<div class="table">

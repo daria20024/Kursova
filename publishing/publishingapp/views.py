@@ -8,6 +8,8 @@ from .baza import *
 class MainPage(View):
     def get(self, request):
         context = {}
+        print("@@")
+        print(request)
         return render(request, 'websity.html', context=context)
 
     def post(self, request):
@@ -162,6 +164,17 @@ class Contract(View):
                 contractss = search(searchs)
             else:
                 contractss = get_contract()
+            context = {
+                'contractss': contractss
+            }
+            return render(request, "websityContract.html", context=context)
+        elif 'searchButtonDate' in request.POST:
+            searchDatee = request.POST.get("searchDate")
+            if searchDate:
+                contractss = searchDate(searchDatee)
+            else:
+                contractss = get_contract()
+
             context = {
                 'contractss': contractss
             }

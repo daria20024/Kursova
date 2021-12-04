@@ -176,7 +176,25 @@ a{
 	color: #000000;
 	margin-left:0;
 }
+.searchDate{
+	position: relative;
+	width: 202px;
+	height: 49px;
+	right:35px;
 
+	background: #FFFFFF;
+	border: 1px solid #742A00;
+	box-sizing: border-box;
+
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 28px;
+	line-height: 33px;
+
+	color: #000000;
+	margin-left:0;
+}
 .buttonSearch{
 	position: relative;
 	width: 49px;

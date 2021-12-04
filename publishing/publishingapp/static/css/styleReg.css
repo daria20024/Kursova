@@ -3,21 +3,36 @@ html{
 
 }
 body{
-	position: absolute;
+margin-left: 54px;
+	margin-right: 37px;
+	margin-top: 42px;
+	margin-bottom: 35px;
+	margin-bottom:35px;
+	/*position: absolute;
 	left: 54px;
 	right: 37px;
 	top: 42px;
-	bottom: 35px;
+	bottom: 35px;*/
 
 	background: #FFFFFF;
 }
 .RegisterNow{
-	position: absolute;
+	/*position: absolute;
 	left: 35px;
 	right: 35px;
-	top: 35px;
-	bottom: 35px;
+	top: 35px;*/
+	/*bottom: 35px;*/
+    margin-left: 220px;
+	margin-right:220px;
 
+	margin-bottom: 35px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 33px;
+
+	padding: 15px;
 	background: #742A00;
 }
 
@@ -47,95 +62,37 @@ body{
 	font-size: 36px;
 	line-height: 42px;
 }
-/*.surname{
 
-	max-width: 565px;
-	padding:15px;
-	left: 33px;
-	top: 123px;
-
-	background: #FFFFFF;
-
-}
-.name{
-	max-width: 565px;
-	padding:15px;
-	left: 33px;
-	top: 220px;
-
-	background: #FFFFFF;
-	
-}
-.patronymic{
-	max-width: 565px;
-	padding:15px;
-	left: 33px;
-	top: 317px;
-
-	background: #FFFFFF;
-}
-.loginRge{
-	max-width: 565px;
-	padding:15px;
-	left: 33px;
-	top: 414px;
-
-	background: #FFFFFF;
-}
-.passwordReg{
-	max-width: 565px;
-	padding:15px;
-	left: 33px;
-	top: 511px;
-
-	background: #FFFFFF;
-}
-.passport{
-	padding:15px;
-	left: 654px;
-	top: 123px;
-
-	background: #FFFFFF;
-}
-.email{
-	padding:15px;
-	left: 654px;
-	top: 220px;
-
-	background: #FFFFFF;
-}
-.telefon{
-	padding:15px;
-	left: 654px;
-	top: 317px;
-
-	background: #FFFFFF;
-}
-.address{
-	padding:15px;
-	left: 654px;
-	top: 414px;
-
-	background: #FFFFFF;
-}
-.accessRights{
-	padding:15px;
-	left: 654px;
-	top: 511px;
-
-	background: #FFFFFF;
-}*/
 input{
 	border:0;
-	margin:20px auto;
+	/*margin:20px auto;*/
 	margin-top:0;
 	padding:20px;
 }
 .block{
-	display: flex;
+
+	/*display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	flex-wrap: wrap;*/
 	/*margin:30px;*/
+
+}
+
+.block{
+
+	/*margin-left: 220px;
+	margin-right:220px;
+
+	margin-bottom: 35px;*/
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	/*line-height: 33px;*/
+	color:#fff;
+
+	/*padding: 15px;*/
+    text-align:center;
 
 }
 
