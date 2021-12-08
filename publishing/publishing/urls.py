@@ -16,6 +16,7 @@ Including another URLconf
 from publishingapp.views import *
 from django.contrib import admin
 from django.urls import path, include
+from django.urls import re_path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,10 +25,11 @@ urlpatterns = [
     path('websityAuthor.html', Author.as_view()),
     path('websityAuthor1.html', Author1.as_view()),
     path('websityChangeContract.html', ChangeContract.as_view()),
-    path('websityContract.html', Contract.as_view()),
+    path('websityContract.html/', Contract.as_view(), name="contract"),
     path('websityContract1.html', Contract1.as_view()),
     path('websityFormalizeContract.html', FormalizeContract.as_view()),
     path('websityPrint.html', Print.as_view()),
     path('websityPrint1.html', Print1.as_view()),
-    path('websity.html', MainPage.as_view())
+    re_path(r'websity.html', MainPage.as_view())
 ]
+handler404 = "publishingapp.views.page_not_found_view"

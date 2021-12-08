@@ -5,8 +5,13 @@ from .baza import *
 
 
 # Create your views here.
+def page_not_found_view(request, exception):
+    return render(request, '404.html', status=404)
+
+
 class MainPage(View):
     def get(self, request):
+
         context = {}
         print("@@")
         print(request)
@@ -79,7 +84,10 @@ class Author1(View):
 
 class ChangeContract(View):
     def get(self,request):
-        context = {}
+
+        context = {
+
+        }
         return render(request, 'websityChangeContract.html', context=context)
 
     def post(self, request):
