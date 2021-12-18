@@ -31,18 +31,12 @@
 								{% for author in selectAuthor %}
 								<option value="{{ author.id }}">({{ author.id }}) {{ author.surname }}</option>
 								{% endfor %}
-								<!--<option  >84x108/32</option>
-								<option >84x108/1/32</option>
-								<option>70x90/1/32</option>
-								<option>60x84/8</option>-->
+
 							</select>
-							<!--<input type="text" class="search" name = "author_id" placeholder="Поиск">-->
-							<!--<a href="websityAuthor1.html"><div  class="buttonSearchPluc" style="display:inline-block; height:47px">-->
 							<a href="websityContract.html">
 							<button type="submit" name="plus" class="buttonSearchPluc">
-							<!--<img src="{% static 'img/+.png' %}"
-											alt="" style="vertical-align:middle; margin:0 10px" width= "36px" height= "36px">-->
-						<!--</div>--></button>
+
+							</button>
 							</a>
 						</td>
 					</tr>
@@ -54,12 +48,9 @@
 								{% for publishing in selectPublishing %}
 								<option value="{{ publishing.id }}">({{ publishing.id }}) {{ publishing.title }}</option>
 								{% endfor %}
-								<!--<option  >84x108/32</option>
-								<option >84x108/1/32</option>
-								<option>70x90/1/32</option>
-								<option>60x84/8</option>-->
+
 							</select>
-							<!--<input type="text" class="search" name = "publishing_id" placeholder="Поиск">-->
+
 						</td>
 					</tr>
 					<tr>
@@ -71,12 +62,7 @@
 								<option value="{{ staff.id }}">({{ staff.id }}) {{ staff.surname }}</option>
 								{% endfor %}
 
-								<!--<option  >84x108/32</option>
-								<option >84x108/1/32</option>
-								<option>70x90/1/32</option>
-								<option>60x84/8</option>-->
 							</select>
-							<!--<input type="text" class="search" name = "staff_id" placeholder="Поиск">-->
 						</td>
 					</tr>
 					<tr>
@@ -89,7 +75,6 @@
 								<option>60x84/8</option>
 								<option selected>{{ idContract.format }}</option>
 							</select>
-							<!--<input type="text" class="search" placeholder="Поиск">-->
 						</td>
 					</tr>
 					<tr>
@@ -111,46 +96,6 @@
 				</a>
 			</div>
 		</form>
-		<!--<div class="table">
-			<table>
-				
-			   <tr>
-					<td>Дата договора</td>
-					<td><input type="text" class="search" value="01.10.2021"></td>
-				</tr>
-				<tr>
-					<td>Автор</td>
-					<td style="font-size: 0;"><input type="text" class="search" style = "width:336px" value="01">
-					<a href="websityAuthor.html"><button type="submit" class="buttonSearchPluc"><img src="{% static 'img/+.png' %}"
-					alt="" style="vertical-align:middle" width= "36px" height= "36px"></button></a></td>
-				</tr>
-				<tr>
-					<td>Издательство</td>
-					<td><input type="text" class="search" value="05"></td>
-				</tr>
-				<tr>
-					<td>Сотрудник</td>
-					<td><input type="text" class="search" value="02"></td>
-				</tr>
-				<tr>
-					<td>Формат</td>
-					<td><input type="text" class="search" value="86х108/32"></td>
-				</tr>
-				<tr>
-					<td>Объём</td>
-					<td><input type="text" class="search" value="300"></td>
-				</tr>
-				<tr>
-					<td>Тираж</td>
-					<td><input type="text" class="search" value="14000"></td>
-				</tr>
-				<tr>
-					<td>Дата исполнения</td>
-					<td><input type="text" class="search" value="31.12.2021"></td>
-				</tr>
-			</table>
-			<a href="websityContract.html"><input type="submit" class="buttonSearch" value="Сохранить"></a>
-			<a href="websityContract.html"><input type="submit" class="buttonSearch" value="Назад"></a>
-		</div>-->
+
 	</body>
 </html>

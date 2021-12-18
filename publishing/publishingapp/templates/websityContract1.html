@@ -12,8 +12,8 @@
 	</head>
 	<body>
 		<div>
-			<div class="a"style="display:inline-block"><a href="../websityContract.html" class="Contract"><!--<img  src = "ДоговорПрямоугольник.png">--></a>
-			<a href="../websityContract.html"class="ContractText">Договоры</a></div>
+			<div class="a"style="display:inline-block"><a href="../websityContract1.html" class="Contract"><!--<img  src = "ДоговорПрямоугольник.png">--></a>
+			<a href="../websityContract1.html"class="ContractText">Договоры</a></div>
 			<!--<div class="a1"style="display:inline-block"><a href="websityFormalizeContract.html" class="formalizeContract"></a>
 			<a href="websityFormalizeContract.html" class="formalizeContractText">ОформитьДоговор</a></div>-->
 			<div class="a2"style="display:inline-block;float:right"><a href="../websity.html" class="Exit" ><!--<img src = "ВыйтиПрямоугольник.png">--></a>
@@ -106,6 +106,8 @@
        		{% csrf_token %}
 			<p style="display:inline-block;float:right;vertical-align:top"><input type="text" class="search" name="search" placeholder="Поиск">
 			<button type="submit" class="buttonSearch" name="searchButton"><img src="{% static 'img/лупа.png' %}" alt="" style="vertical-align:middle" width= "36px" height= "36px"></button></p>
+			<p style="display:inline-block;float:right;vertical-align:top"><input type="date" class="searchDate" name="searchDate" placeholder="Поиск">
+			<button type="submit" class="buttonSearch" name="searchButtonDate"><img src="{% static 'img/лупа.png' %}" alt="" style="vertical-align:middle" width= "36px" height= "36px"></button></p>
 		</form>
 		</div>
 		<div class="table">
@@ -127,121 +129,12 @@
 				{% for contract in contractss %}
 				{% include 'contractOne.html' %}
 				{% endfor %}
-			   <!--<tr>
-					<td>ID</td>
-					<td>Дата договора</td>
-					<td>Дата исполнения</td>
-					<td>Формат</td>
-					<td>Объём</td>
-					<td>Тираж</td>
-					<td>Сотрудник</td>
-					<td>Автор</td>
-					<td>Издательство</td>
-				</tr>
-				<tr>
-					<td>ID</td>
-					<td>Дата договора</td>
-					<td>Дата исполнения</td>
-					<td>Формат</td>
-					<td>Объём</td>
-					<td>Тираж</td>
-					<td>Сотрудник</td>
-					<td>Автор</td>
-					<td>Издательство</td>
-				</tr>
-				<tr>
-					<td>ID</td>
-					<td>Дата договора</td>
-					<td>Дата исполнения</td>
-					<td>Формат</td>
-					<td>Объём</td>
-					<td>Тираж</td>
-					<td>Сотрудник</td>
-					<td>Автор</td>
-					<td>Издательство</td>
-				</tr>
-				<tr>
-					<td>ID</td>
-					<td>Дата договора</td>
-					<td>Дата исполнения</td>
-					<td>Формат</td>
-					<td>Объём</td>
-					<td>Тираж</td>
-					<td>Сотрудник</td>
-					<td>Автор</td>
-					<td>Издательство</td>
-				</tr>
-				<tr>
-					<td>ID</td>
-					<td>Дата договора</td>
-					<td>Дата исполнения</td>
-					<td>Формат</td>
-					<td>Объём</td>
-					<td>Тираж</td>
-					<td>Сотрудник</td>
-					<td>Автор</td>
-					<td>Издательство</td>
-				</tr>
-				<tr>
-					<td>ID</td>
-					<td>Дата договора</td>
-					<td>Дата исполнения</td>
-					<td>Формат</td>
-					<td>Объём</td>
-					<td>Тираж</td>
-					<td>Сотрудник</td>
-					<td>Автор</td>
-					<td>Издательство</td>
-				</tr>
-				<tr>
-					<td>ID</td>
-					<td>Дата договора</td>
-					<td>Дата исполнения</td>
-					<td>Формат</td>
-					<td>Объём</td>
-					<td>Тираж</td>
-					<td>Сотрудник</td>
-					<td>Автор</td>
-					<td>Издательство</td>
-				</tr>
-				<tr>
-					<td>ID</td>
-					<td>Дата договора</td>
-					<td>Дата исполнения</td>
-					<td>Формат</td>
-					<td>Объём</td>
-					<td>Тираж</td>
-					<td>Сотрудник</td>
-					<td>Автор</td>
-					<td>Издательство</td>
-				</tr>
-				<tr>
-					<td>ID</td>
-					<td>Дата договора</td>
-					<td>Дата исполнения</td>
-					<td>Формат</td>
-					<td>Объём</td>
-					<td>Тираж</td>
-					<td>Сотрудник</td>
-					<td>Автор</td>
-					<td>Издательство</td>
-				</tr>
-				<tr>
-					<td>ID</td>
-					<td>Дата договора</td>
-					<td>Дата исполнения</td>
-					<td>Формат</td>
-					<td>Объём</td>
-					<td>Тираж</td>
-					<td>Сотрудник</td>
-					<td>Автор</td>
-					<td>Издательство</td>
-				</tr>-->
+
 			</table>
 			<div class="button">
 
 
-				<a href="websityPrint.html"><input type="submit" class="buttonStyle buttonPrint" name="print" value="Печатать"></a>
+				<a href="../websityPrint.html"><input type="submit" class="buttonStyle buttonPrint" name="print" value="Печатать"></a>
 				<!--<a href="websityChangeContract.html"><input type="submit" class="buttonStyle buttonEdit" name="update" value="Редактировать"></a>
 				<input type="submit" class="buttonStyle buttonDelete" name="delete" value="Удалить">-->
 

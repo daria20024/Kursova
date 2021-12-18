@@ -125,6 +125,7 @@ class Contract(View):
         if id:
             idContract = get_contract_id(id)
             if request.POST.get("print"):
+                print("print")
                 context = {
                     'idContract': idContract,
                 }
@@ -243,7 +244,8 @@ class Contract(View):
             return render(request, "websityChangeContract.html", context=context)
 
         else:
-            return HttpResponseRedirect('websityContract.html')
+            print("else")
+            return HttpResponseRedirect('../websityContract.html')
 
 
 class Contract1(View):
@@ -274,6 +276,17 @@ class Contract1(View):
                 'contractss': contractss
             }
             return render(request, "websityContract1.html", context=context)
+        elif 'searchButtonDate' in request.POST:
+            searchDatee = request.POST.get("searchDate")
+            if searchDate:
+                contractss = searchDate(searchDatee)
+            else:
+                contractss = get_contract()
+
+            context = {
+                'contractss': contractss
+            }
+            return render(request, "websityContract1.html", context=context)
         elif 'sort1' in request.POST:
             sort = request.POST.get("Sort")
             contractss = sort_id(sort)
@@ -291,7 +304,7 @@ class Contract1(View):
             else:
                 return render(request, 'websityContract1.html', context=context)
         else:
-            return HttpResponseRedirect('websityContract1.html')
+            return HttpResponseRedirect('../websityContract1.html')
 
 
 class FormalizeContract(View):

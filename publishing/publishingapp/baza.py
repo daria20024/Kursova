@@ -2,10 +2,15 @@
 from .models import *
 from django.db.models import Q
 import datetime
+from datetime import date
+
 
 def get_contract():
-    contracts = contract.objects.all()
-    return contracts
+    searchs = contract.objects.filter(dateExecution__gte=datetime.datetime.now().date())
+    return searchs
+    '''print(datetime.datetime.now().date())
+    contracts = contract.objects.filter(Q(dateExecution=datetime.datetime.now().date()))
+    return contracts'''
 
 
 def get_contract_id(id):
@@ -55,25 +60,25 @@ def passwordSearch(password):
 
 def sort_id(sort):
     if sort == 'ID':
-        users = contract.objects.order_by('id')
+        users = contract.objects.filter(dateExecution__gte=datetime.datetime.now().date()).order_by('id')
     elif sort == 'contractDate':
-        users = contract.objects.order_by('contractDate')
+        users =contract.objects.filter(dateExecution__gte=datetime.datetime.now().date()).order_by('contractDate')
     elif sort == 'circulation':
-        users = contract.objects.order_by('circulation')
+        users = contract.objects.filter(dateExecution__gte=datetime.datetime.now().date()).order_by('circulation')
     elif sort == 'format':
-        users = contract.objects.order_by('format')
+        users = contract.objects.filter(dateExecution__gte=datetime.datetime.now().date()).order_by('format')
     elif sort == 'volume':
-        users = contract.objects.order_by('volume')
+        users = contract.objects.filter(dateExecution__gte=datetime.datetime.now().date()).order_by('volume')
     elif sort == 'dateExecution':
-        users = contract.objects.order_by('dateExecution')
+        users = contract.objects.filter(dateExecution__gte=datetime.datetime.now().date()).order_by('dateExecution')
     elif sort == 'staff_id':
-        users = contract.objects.order_by('staff_id')
+        users = contract.objects.filter(dateExecution__gte=datetime.datetime.now().date()).order_by('staff_id')
     elif sort == 'publishing_id':
-        users = contract.objects.order_by('publishing_id')
+        users = contract.objects.filter(dateExecution__gte=datetime.datetime.now().date()).order_by('publishing_id')
     elif sort == 'author_id':
-        users = contract.objects.order_by('author_id')
+        users = contract.objects.filter(dateExecution__gte=datetime.datetime.now().date()).order_by('author_id')
     else:
-        users = contract.objects.order_by('id')
+        users = contract.objects.filter(dateExecution__gte=datetime.datetime.now().date()).order_by('id')
     return users
 
 
@@ -99,6 +104,7 @@ def search(word):
 
 
 def searchDate(word):
+    print(word)
     searchs = contract.objects.filter(Q(contractDate=word)| Q(dateExecution=word))
     return searchs
 
