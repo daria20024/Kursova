@@ -159,7 +159,21 @@ class Contract(View):
                 staff_id = request.POST.get("staff_id")
                 publishing_id = request.POST.get("publishing_id")
                 author_id = request.POST.get("author_id")
+                if contractDate >= dateExecution:
+                    print("date")
+                    selectAuthor = get_author()
+                    selectPublishing = get_push()
+                    selectStaff = get_staff()
 
+                    context = {
+                        'selectAuthor': selectAuthor,
+                        'selectPublishing': selectPublishing,
+                        'selectStaff': selectStaff,
+                        'idContract': idContract,
+
+                        "message": "Дата исполнения не может быть меньше Даты договора"
+                    }
+                    return render(request, 'websityChangeContract.html', context=context)
                 update_contract(id, contractDate, circulation, format, volume, dateExecution, staff_id, publishing_id,
                                 author_id)
                 contractss = get_contract()
@@ -278,7 +292,7 @@ class Contract1(View):
             return render(request, "websityContract1.html", context=context)
         elif 'searchButtonDate' in request.POST:
             searchDatee = request.POST.get("searchDate")
-            if searchDate:
+            if searchDatee:
                 contractss = searchDate(searchDatee)
             else:
                 contractss = get_contract()
@@ -304,6 +318,7 @@ class Contract1(View):
             else:
                 return render(request, 'websityContract1.html', context=context)
         else:
+            print("else")
             return HttpResponseRedirect('../websityContract1.html')
 
 
@@ -329,7 +344,19 @@ class FormalizeContract(View):
         staff_id = request.POST.get("staff_id")
         publishing_id = request.POST.get("publishing_id")
         author_id = request.POST.get("author_id")
+        if contractDate >= dateExecution:
+            print("date")
+            selectAuthor = get_author()
+            selectPublishing = get_push()
+            selectStaff = get_staff()
 
+            context = {
+                'selectAuthor': selectAuthor,
+                'selectPublishing': selectPublishing,
+                'selectStaff': selectStaff,
+                "message": "Дата исполнения не может быть меньше Даты договора"
+            }
+            return render(request, 'websityFormalizeContract.html', context=context)
         add_contract(contractDate, circulation, format, volume, dateExecution, staff_id, publishing_id,
                       author_id)
 

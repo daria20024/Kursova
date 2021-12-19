@@ -102,11 +102,14 @@
 		  </div>
 		</div>
 		<div style="display:inline-block; float:right">
-		<form id="coSe-form" action="" method="post">
+		<form id="coSe-form" class="coSe-form" action="" method="post">
        		{% csrf_token %}
 			<p style="display:inline-block;float:right;vertical-align:top"><input type="text" class="search" name="search" placeholder="Поиск">
 			<button type="submit" class="buttonSearch" name="searchButton"><img src="{% static 'img/лупа.png' %}" alt="" style="vertical-align:middle" width= "36px" height= "36px"></button></p>
-			<p style="display:inline-block;float:right;vertical-align:top"><input type="date" class="searchDate" name="searchDate" placeholder="Поиск">
+		</form>
+		<form id="coSe-form2" class="coSe-form" action="" method="post">
+       		{% csrf_token %}
+			<p style="display:inline-block;float:right;vertical-align:top"><input type="date" min="0001-01-01" class="searchDate" name="searchDate" placeholder="Поиск" required>
 			<button type="submit" class="buttonSearch" name="searchButtonDate"><img src="{% static 'img/лупа.png' %}" alt="" style="vertical-align:middle" width= "36px" height= "36px"></button></p>
 		</form>
 		</div>
